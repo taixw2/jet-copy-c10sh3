@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/recent_news_page/news_item/news_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'recent_news_page_model.dart';
 export 'recent_news_page_model.dart';
@@ -57,7 +56,7 @@ class _RecentNewsPageWidgetState extends State<RecentNewsPageWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'octmilq4' /* Recent news */,
+              'octmilq4' /* 近期消息 */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'SF Pro Display',
@@ -79,20 +78,191 @@ class _RecentNewsPageWidgetState extends State<RecentNewsPageWidget> {
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  wrapWithModel(
-                    model: _model.newsItemModel1,
-                    updateCallback: () => safeSetState(() {}),
-                    child: const NewsItemWidget(),
+                  Container(
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    constraints: const BoxConstraints(
+                      minHeight: 80.0,
+                    ),
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          16.0, 16.0, 16.0, 16.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'u9p416sn' /* 衣服品类-修改报价金额 */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .titleLarge
+                                  .override(
+                                    fontFamily: 'SF Pro Display',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                          ),
+                          Expanded(
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'aqw3hrnn' /* JL-4443 Jone Doe */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'SF Pro Display',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                          ),
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              'do71muvc' /* 2024.12.04 15:30 */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'SF Pro Display',
+                                  color: const Color(0xFF999999),
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
+                          ),
+                        ].divide(const SizedBox(height: 8.0)),
+                      ),
+                    ),
                   ),
-                  wrapWithModel(
-                    model: _model.newsItemModel2,
-                    updateCallback: () => safeSetState(() {}),
-                    child: const NewsItemWidget(),
+                  Container(
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    constraints: const BoxConstraints(
+                      minHeight: 80.0,
+                    ),
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          16.0, 16.0, 16.0, 16.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'occqaaq5' /* 衣服品类-修改报价金额 */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .titleLarge
+                                  .override(
+                                    fontFamily: 'SF Pro Display',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                          ),
+                          Expanded(
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'i7zb2bba' /* JL-4443 Jone Doe */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'SF Pro Display',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                          ),
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              '4mu1ifzq' /* 2024.12.04 15:30 */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'SF Pro Display',
+                                  color: const Color(0xFF999999),
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
+                          ),
+                        ].divide(const SizedBox(height: 8.0)),
+                      ),
+                    ),
                   ),
-                  wrapWithModel(
-                    model: _model.newsItemModel3,
-                    updateCallback: () => safeSetState(() {}),
-                    child: const NewsItemWidget(),
+                  Container(
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    constraints: const BoxConstraints(
+                      minHeight: 80.0,
+                    ),
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          16.0, 16.0, 16.0, 16.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'sotvz6ma' /* 衣服品类-修改报价金额 */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .titleLarge
+                                  .override(
+                                    fontFamily: 'SF Pro Display',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                          ),
+                          Expanded(
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'gbv1odjb' /* JL-4443 Jone Doe */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'SF Pro Display',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                            ),
+                          ),
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              'q8zx36av' /* 2024.12.04 15:30 */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'SF Pro Display',
+                                  color: const Color(0xFF999999),
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
+                          ),
+                        ].divide(const SizedBox(height: 8.0)),
+                      ),
+                    ),
                   ),
                 ].divide(const SizedBox(height: 16.0)),
               ),

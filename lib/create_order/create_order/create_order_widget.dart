@@ -419,7 +419,7 @@ class _CreateOrderWidgetState extends State<CreateOrderWidget> {
                           updateCallback: () => safeSetState(() {}),
                           child: LabelInputWidget(
                             label: FFLocalizations.of(context).getText(
-                              'ar1ixqxj' /* Load/unload costs */,
+                              'ar1ixqxj' /* Loadunload costs */,
                             ),
                             readOnly: false,
                             required: false,

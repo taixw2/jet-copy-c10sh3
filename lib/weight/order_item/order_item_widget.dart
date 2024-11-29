@@ -46,7 +46,9 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
       },
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
-        height: 183.0,
+        constraints: const BoxConstraints(
+          minHeight: 200.0,
+        ),
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
           borderRadius: BorderRadius.circular(10.0),
@@ -111,7 +113,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                       children: [
                         Text(
                           FFLocalizations.of(context).getText(
-                            '37q90i69' /* Clothes */,
+                            '37q90i69' /* 服饰 */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -143,7 +145,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                       children: [
                         Text(
                           FFLocalizations.of(context).getText(
-                            'cmra40vp' /* Dep 2024.09.01 */,
+                            'cmra40vp' /* 入仓时间 2024.09.01 */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -156,7 +158,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                         ),
                         Text(
                           FFLocalizations.of(context).getText(
-                            '2myp0svw' /* Est 2024.08.20 */,
+                            '2myp0svw' /* 打包确认时间 2024.08.20 */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -207,7 +209,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                     ),
                     Text(
                       FFLocalizations.of(context).getText(
-                        '6jlbymsz' /* Total sum: 790 $ */,
+                        '6jlbymsz' /* 总计 790 $ */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'SF Pro Display',

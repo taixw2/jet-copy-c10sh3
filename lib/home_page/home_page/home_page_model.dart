@@ -1,8 +1,5 @@
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/main_page/weight/home_header/home_header_widget.dart';
-import '/main_page/weight/home_menu_item/home_menu_item_widget.dart';
-import '/weight/banlance_stat/banlance_stat_widget.dart';
 import '/weight/title/title_widget.dart';
 import '/backend/schema/structs/index.dart';
 import 'dart:async';
@@ -13,22 +10,8 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   ///  State fields for stateful widgets in this page.
 
-  // Model for HomeHeader component.
-  late HomeHeaderModel homeHeaderModel;
-  // Model for HomeMenuItem component.
-  late HomeMenuItemModel homeMenuItemModel1;
-  // Model for HomeMenuItem component.
-  late HomeMenuItemModel homeMenuItemModel2;
-  // Model for HomeMenuItem component.
-  late HomeMenuItemModel homeMenuItemModel3;
-  // Model for HomeMenuItem component.
-  late HomeMenuItemModel homeMenuItemModel4;
   // Model for Title component.
-  late TitleModel titleModel1;
-  // Model for BanlanceStat component.
-  late BanlanceStatModel banlanceStatModel;
-  // Model for Title component.
-  late TitleModel titleModel2;
+  late TitleModel titleModel;
   // State field(s) for ListView widget.
 
   PagingController<ApiPagingParams, dynamic>? listViewPagingController;
@@ -36,26 +19,12 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
 
   @override
   void initState(BuildContext context) {
-    homeHeaderModel = createModel(context, () => HomeHeaderModel());
-    homeMenuItemModel1 = createModel(context, () => HomeMenuItemModel());
-    homeMenuItemModel2 = createModel(context, () => HomeMenuItemModel());
-    homeMenuItemModel3 = createModel(context, () => HomeMenuItemModel());
-    homeMenuItemModel4 = createModel(context, () => HomeMenuItemModel());
-    titleModel1 = createModel(context, () => TitleModel());
-    banlanceStatModel = createModel(context, () => BanlanceStatModel());
-    titleModel2 = createModel(context, () => TitleModel());
+    titleModel = createModel(context, () => TitleModel());
   }
 
   @override
   void dispose() {
-    homeHeaderModel.dispose();
-    homeMenuItemModel1.dispose();
-    homeMenuItemModel2.dispose();
-    homeMenuItemModel3.dispose();
-    homeMenuItemModel4.dispose();
-    titleModel1.dispose();
-    banlanceStatModel.dispose();
-    titleModel2.dispose();
+    titleModel.dispose();
     listViewPagingController?.dispose();
   }
 

@@ -254,7 +254,7 @@ class _GuidePageWidgetState extends State<GuidePageWidget> {
                     children: [
                       FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('LoginPage');
+                          context.goNamed('LoginPage');
                         },
                         text: FFLocalizations.of(context).getText(
                           'fhtmz1u6' /* Log in */,
@@ -280,7 +280,7 @@ class _GuidePageWidgetState extends State<GuidePageWidget> {
                       ),
                       FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('GetAccessPage');
+                          context.goNamed('GetAccessPage');
                         },
                         text: FFLocalizations.of(context).getText(
                           'ohqf308y' /* Get access */,

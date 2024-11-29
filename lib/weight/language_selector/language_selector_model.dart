@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'recent_news_page_widget.dart' show RecentNewsPageWidget;
+import 'language_selector_widget.dart' show LanguageSelectorWidget;
 import 'package:flutter/material.dart';
 
-class RecentNewsPageModel extends FlutterFlowModel<RecentNewsPageWidget> {
+class LanguageSelectorModel extends FlutterFlowModel<LanguageSelectorWidget> {
   @override
   void initState(BuildContext context) {}
 

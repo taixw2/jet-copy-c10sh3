@@ -111,7 +111,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       children: [
                         FFButtonWidget(
                           onPressed: () async {
-                            context.pushNamed('MainPage');
+                            context.pushNamed('HomePage');
                           },
                           text: FFLocalizations.of(context).getText(
                             'em4o3lw6' /* Log in */,

@@ -213,8 +213,8 @@ class _GetAccessPageWidgetState extends State<GetAccessPageWidget> {
                   ),
                 ),
                 FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
+                  onPressed: () async {
+                    context.goNamed('HomePage');
                   },
                   text: FFLocalizations.of(context).getText(
                     '0z93b7va' /* Submit */,

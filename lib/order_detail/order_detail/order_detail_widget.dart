@@ -445,7 +445,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                           updateCallback: () => safeSetState(() {}),
                           child: LabelInputWidget(
                             label: FFLocalizations.of(context).getText(
-                              'pbzy2jxq' /* Load/unload costs */,
+                              'pbzy2jxq' /* Loadunload costs */,
                             ),
                             readOnly: true,
                             initialValue: '0.91',

@@ -159,7 +159,7 @@ class _CreateCalculatorSettingsPageWidgetState
                   updateCallback: () => safeSetState(() {}),
                   child: LabelInputWidget(
                     label: FFLocalizations.of(context).getText(
-                      '6deqmm8s' /* Insurance by density (kh/m3) */,
+                      '6deqmm8s' /* Insurance by density (khm3) */,
                     ),
                     readOnly: false,
                     required: false,

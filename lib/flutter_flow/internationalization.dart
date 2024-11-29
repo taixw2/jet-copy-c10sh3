@@ -333,105 +333,120 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // CalculatorPage
   {
+    '71hi1jdd': {
+      'en': '货物信息',
+      'ru': '',
+      'zh_Hans': '',
+    },
     'ob6zwfxq': {
-      'en': 'Weight',
+      'en': '体积（m3）',
       'ru': 'Вес',
       'zh_Hans': '重量',
     },
+    'tfas4afr': {
+      'en': '密度（kg/m3）',
+      'ru': 'Объем',
+      'zh_Hans': '体积',
+    },
     'v3nat4rl': {
-      'en': 'Volume',
+      'en': '重量（kg）',
       'ru': 'Объем',
       'zh_Hans': '体积',
     },
     'rht71v17': {
-      'en': 'Picking type',
+      'en': '打包方式',
       'ru': 'Тип подбора',
       'zh_Hans': '打包类型',
     },
     'a2s00vhi': {
-      'en': 'Laptop (15-18 days)',
+      'en': '无',
       'ru': 'Ноутбук (15-18 дней)',
       'zh_Hans': '笔记本电脑（15-18天）',
     },
     'krez0msx': {
-      'en': 'Laptop (15-18 days)',
+      'en': '普通打包',
       'ru': 'Ноутбук (15-18 дней)',
       'zh_Hans': '笔记本电脑（15-18天）',
     },
     'nt7pguxc': {
-      'en': 'Laptop (15-18 days)',
+      'en': '纸护角',
       'ru': 'Ноутбук (15-18 дней)',
       'zh_Hans': '笔记本电脑（15-18天）',
+    },
+    'djvo16eb': {
+      'en': '木架',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'zq3auqtk': {
+      'en': '木托',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'c8u1vs2o': {
+      'en': '请选择',
+      'ru': '',
+      'zh_Hans': '',
     },
     'jdp0dcfr': {
       'en': 'Search...',
       'ru': 'Поиск...',
       'zh_Hans': '搜索...',
     },
-    'ebk0aoso': {
-      'en': 'Product Category',
-      'ru': 'Категория продукта',
-      'zh_Hans': '产品类别',
+    'ky5t4bv6': {
+      'en': '费用信息',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'tk02ruut': {
-      'en': 'Laptop (15-18 days)',
+    '4d2b5c26': {
+      'en': '商品类型',
+      'ru': 'Тип подбора',
+      'zh_Hans': '打包类型',
+    },
+    '9jfrrx7o': {
+      'en': '无',
       'ru': 'Ноутбук (15-18 дней)',
       'zh_Hans': '笔记本电脑（15-18天）',
     },
-    '71wcjt5y': {
-      'en': 'Laptop (15-18 days)',
-      'ru': 'Ноутбук (15-18 дней)',
-      'zh_Hans': '笔记本电脑（15-18天）',
+    'sxuulsjz': {
+      'en': '请选择',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'qa4kd799': {
-      'en': 'Laptop (15-18 days)',
-      'ru': 'Ноутбук (15-18 дней)',
-      'zh_Hans': '笔记本电脑（15-18天）',
-    },
-    'xiij32tk': {
+    'w3xusidg': {
       'en': 'Search...',
       'ru': 'Поиск...',
       'zh_Hans': '搜索...',
     },
-    'rpwyor29': {
-      'en': 'Total Sum',
-      'ru': 'Общая сумма',
-      'zh_Hans': '总和',
+    'l76my6y7': {
+      'en': '保险费',
+      'ru': 'Объем',
+      'zh_Hans': '体积',
     },
-    '69iz8kun': {
-      'en': '313.1 \$',
-      'ru': '313,1 \$',
-      'zh_Hans': '313.1 美元',
+    'u7uvid1v': {
+      'en': '落地费',
+      'ru': 'Вес',
+      'zh_Hans': '重量',
     },
-    'bjkhojv1': {
-      'en': 'Weight rate per kg',
-      'ru': 'Норма веса за кг',
-      'zh_Hans': '每公斤重量费率',
+    'zh2gqj8v': {
+      'en': '附加费',
+      'ru': 'Объем',
+      'zh_Hans': '体积',
     },
-    '8lx5b2xm': {
-      'en': '3.10 \$',
-      'ru': '3.10 \$',
-      'zh_Hans': '3.10 美元',
+    'o0wehxdy': {
+      'en': '合计',
+      'ru': 'Объем',
+      'zh_Hans': '体积',
     },
-    'z15k2byx': {
-      'en': 'Weight rate total',
-      'ru': 'Общий весовой коэффициент',
-      'zh_Hans': '重量费率总计',
+    'zi9238ho': {
+      'en': '1.230\$',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'k1iy76fz': {
-      'en': '3.10 \$',
-      'ru': '3.10 \$',
-      'zh_Hans': '3.10 美元',
-    },
-    'kxa20c1g': {
-      'en': 'Loading rate in your country',
-      'ru': 'Скорость загрузки в вашей стране',
-      'zh_Hans': '您所在国家/地区的装载率',
-    },
-    'i9wyjuoa': {
-      'en': 'Calculator',
-      'ru': 'Калькулятор',
-      'zh_Hans': '计算器',
+    'mw75m23g': {
+      'en': '运费估算',
+      'ru': '',
+      'zh_Hans': '',
     },
     'm5o7gw6l': {
       'en': 'Home',
@@ -514,8 +529,59 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // RecentNewsPage
   {
+    'u9p416sn': {
+      'en': '衣服品类-修改报价金额',
+      'ru':
+          'Уважаемый клиент,\nМы рады сообщить Вам, что Ваш груз с номером отслеживания [Отслеживание...',
+      'zh_Hans': '尊敬的顾客，\n我们很高兴地通知您，您的货物跟踪号为 [跟踪...',
+    },
+    'aqw3hrnn': {
+      'en': 'JL-4443 Jone Doe',
+      'ru':
+          'Уважаемый клиент,\nМы рады сообщить Вам, что Ваш груз с номером отслеживания [Отслеживание...',
+      'zh_Hans': '尊敬的顾客，\n我们很高兴地通知您，您的货物跟踪号为 [跟踪...',
+    },
+    'do71muvc': {
+      'en': '2024.12.04 15:30',
+      'ru': '2024.12.04 15:30',
+      'zh_Hans': '2024.12.04 15:30',
+    },
+    'occqaaq5': {
+      'en': '衣服品类-修改报价金额',
+      'ru':
+          'Уважаемый клиент,\nМы рады сообщить Вам, что Ваш груз с номером отслеживания [Отслеживание...',
+      'zh_Hans': '尊敬的顾客，\n我们很高兴地通知您，您的货物跟踪号为 [跟踪...',
+    },
+    'i7zb2bba': {
+      'en': 'JL-4443 Jone Doe',
+      'ru':
+          'Уважаемый клиент,\nМы рады сообщить Вам, что Ваш груз с номером отслеживания [Отслеживание...',
+      'zh_Hans': '尊敬的顾客，\n我们很高兴地通知您，您的货物跟踪号为 [跟踪...',
+    },
+    '4mu1ifzq': {
+      'en': '2024.12.04 15:30',
+      'ru': '2024.12.04 15:30',
+      'zh_Hans': '2024.12.04 15:30',
+    },
+    'sotvz6ma': {
+      'en': '衣服品类-修改报价金额',
+      'ru':
+          'Уважаемый клиент,\nМы рады сообщить Вам, что Ваш груз с номером отслеживания [Отслеживание...',
+      'zh_Hans': '尊敬的顾客，\n我们很高兴地通知您，您的货物跟踪号为 [跟踪...',
+    },
+    'gbv1odjb': {
+      'en': 'JL-4443 Jone Doe',
+      'ru':
+          'Уважаемый клиент,\nМы рады сообщить Вам, что Ваш груз с номером отслеживания [Отслеживание...',
+      'zh_Hans': '尊敬的顾客，\n我们很高兴地通知您，您的货物跟踪号为 [跟踪...',
+    },
+    'q8zx36av': {
+      'en': '2024.12.04 15:30',
+      'ru': '2024.12.04 15:30',
+      'zh_Hans': '2024.12.04 15:30',
+    },
     'octmilq4': {
-      'en': 'Recent news',
+      'en': '近期消息',
       'ru': 'Последние новости',
       'zh_Hans': '最新资讯',
     },
@@ -2326,8 +2392,168 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // HomePage
   {
+    'fttjluih': {
+      'en': 'Jone Doe',
+      'ru': 'Джон Доу',
+      'zh_Hans': '琼斯·多伊',
+    },
+    '9wq916wu': {
+      'en': '管理员',
+      'ru': 'Админ',
+      'zh_Hans': '管理员',
+    },
+    '427km5pk': {
+      'en': '中文',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ennhrwvu': {
+      'en': '仓库地址',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '82uxmyzs': {
+      'en': '汇率换算',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'acaw6fqa': {
+      'en': '运费估算',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'iladh2ax': {
+      'en': '近期消息',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'qrdcok3z': {
+      'en': '数据统计',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '13o35nxe': {
+      'en': '2024',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '27faf46e': {
+      'en': '总发货量',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'npcpfwlj': {
+      'en': '1.789.98m3/288.937.00kg',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '5wvr09yp': {
+      'en': '总到货量',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'do7ai7fe': {
+      'en': '1.544.45m3/288.937.0',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'b6tb91hf': {
+      'en': '发货总利润',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '0gynx2le': {
+      'en': '22.376.504\$ ',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'tdky7176': {
+      'en': '到货总利润',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'l0m1yzi3': {
+      'en': '2.304\$ ',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '8p07n1eq': {
+      'en': '经理总额',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ia0p1lbm': {
+      'en': '900.000\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'y2qvue8z': {
+      'en': '代理总额',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'vafwgu9y': {
+      'en': '9000.000\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'qm9jyr3o': {
+      'en': '国外卸货费',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'vgjkomm4': {
+      'en': '90\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'qdbegvcl': {
+      'en': '总打包费',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'fh654sto': {
+      'en': '9000.000\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'v82qmpp4': {
+      'en': '国外莫办余额',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '87zt40od': {
+      'en': '9.000\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'o7v4jbqg': {
+      'en': '客户总量',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '7xua9l57': {
+      'en': '90人',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'jxynhym2': {
+      'en': '绑定渠道',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uzj0jj63': {
+      'en': '最近订单',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '1wi8r16a': {
+      'en': '查看更多',
+      'ru': '',
+      'zh_Hans': '',
+    },
     '28ecwdlu': {
-      'en': 'Home',
+      'en': '首页',
       'ru': 'Главная',
       'zh_Hans': '首页',
     },
@@ -2498,7 +2724,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': '删除帐户',
     },
     'zewbeout': {
-      'en': 'Home',
+      'en': '个人中心',
       'ru': 'Главная',
       'zh_Hans': '首页',
     },
@@ -2519,9 +2745,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': '琼斯·多伊',
     },
     'qit7o7dt': {
-      'en': 'Admin',
+      'en': '管理员',
       'ru': 'Админ',
       'zh_Hans': '管理员',
+    },
+    'f1r92v11': {
+      'en': '中文',
+      'ru': '',
+      'zh_Hans': '',
     },
   },
   // Steps
@@ -2550,7 +2781,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': 'JL-4443 琼斯·多伊',
     },
     '37q90i69': {
-      'en': 'Clothes',
+      'en': '服饰',
       'ru': 'Одежда',
       'zh_Hans': '衣服',
     },
@@ -2560,12 +2791,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': '(12-14天)',
     },
     'cmra40vp': {
-      'en': 'Dep 2024.09.01',
+      'en': '入仓时间 2024.09.01',
       'ru': 'Деп 2024.09.01',
       'zh_Hans': '出发日期 2024.09.01',
     },
     '2myp0svw': {
-      'en': 'Est 2024.08.20',
+      'en': '打包确认时间 2024.08.20',
       'ru': 'Эст 2024.08.20',
       'zh_Hans': '预计 2024.08.20',
     },
@@ -2575,7 +2806,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': 'JL-4443-0509-2 | 2024.08.08',
     },
     '6jlbymsz': {
-      'en': 'Total sum: 790 \$',
+      'en': '总计 790 \$',
       'ru': 'Общая сумма: 790 \$',
       'zh_Hans': '总金额：790 美元',
     },
@@ -3006,6 +3237,105 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Yes',
       'ru': 'Да',
       'zh_Hans': '是的',
+    },
+  },
+  // LanguageSelector
+  {
+    'tux85dej': {
+      'en': '选择语言',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'zzajnduh': {
+      'en': '中文',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'w217ignr': {
+      'en': 'English',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '295g82nq': {
+      'en': 'RU',
+      'ru': '',
+      'zh_Hans': '',
+    },
+  },
+  // WarehouseAddress
+  {
+    '7t7lj3n6': {
+      'en': '仓库地址',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ay8z84f3': {
+      'en': 'TextField',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ghxzjnai': {
+      'en': '广州市白云区石门街石沙路石井工业区三横路1号G1 -102 .代码JL8888 \n陈生  123456788 ',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ip9rxltn': {
+      'en': '分享',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '5aorvhyd': {
+      'en': '复制',
+      'ru': '',
+      'zh_Hans': '',
+    },
+  },
+  // TodayExchangeRate
+  {
+    'oyev7d54': {
+      'en': '今日汇率',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'r81bifd1': {
+      'en': '1\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'r8t68hc4': {
+      'en': '100RU',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'qb8baxnz': {
+      'en': '1USTD',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'iqckz8z0': {
+      'en': '7.5¥',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '8fe9ia89': {
+      'en': '汇卡1¥',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'qtyode0f': {
+      'en': '14.4RUB',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '899llkf5': {
+      'en': '现金1¥',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'dau3i9kv': {
+      'en': '14.4RUB',
+      'ru': '',
+      'zh_Hans': '',
     },
   },
   // Miscellaneous

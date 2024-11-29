@@ -89,7 +89,7 @@ class _HomeHeaderWidgetState extends State<HomeHeaderWidget> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'qit7o7dt' /* Admin */,
+                    'qit7o7dt' /* 管理员 */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'SF Pro Display',
@@ -104,13 +104,38 @@ class _HomeHeaderWidgetState extends State<HomeHeaderWidget> {
             ),
           ].divide(const SizedBox(width: 16.0)),
         ),
-        FlutterFlowIconButton(
-          borderRadius: 8.0,
-          buttonSize: 40.0,
-          icon: widget.icon!,
-          onPressed: () async {
-            await widget.iconAction?.call();
-          },
+        Row(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Text(
+                  FFLocalizations.of(context).getText(
+                    'f1r92v11' /* 中文 */,
+                  ),
+                  style: FlutterFlowTheme.of(context).labelSmall.override(
+                        fontFamily: 'SF Pro Display',
+                        letterSpacing: 0.0,
+                        useGoogleFonts: false,
+                      ),
+                ),
+                Icon(
+                  Icons.arrow_drop_down,
+                  color: FlutterFlowTheme.of(context).info,
+                  size: 24.0,
+                ),
+              ],
+            ),
+            FlutterFlowIconButton(
+              borderRadius: 8.0,
+              buttonSize: 40.0,
+              icon: widget.icon!,
+              onPressed: () async {
+                await widget.iconAction?.call();
+              },
+            ),
+          ],
         ),
       ],
     );
