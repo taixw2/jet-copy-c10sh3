@@ -137,7 +137,9 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'HomePage': const HomePageWidget(),
-      'CouponsettingsPage': const CouponsettingsPageWidget(),
+      'OrderPage': const OrderPageWidget(),
+      'ClientPage': const ClientPageWidget(),
+      'SupportPage': const SupportPageWidget(),
       'ProfilePage': const ProfilePageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -173,11 +175,43 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: const Icon(
-              Icons.home_outlined,
+              Icons.featured_play_list_outlined,
+              size: 24.0,
+            ),
+            activeIcon: const Icon(
+              Icons.featured_play_list_rounded,
               size: 24.0,
             ),
             label: FFLocalizations.of(context).getText(
-              '8dkx0mo5' /* Home */,
+              'jdrc6cgn' /* 订单 */,
+            ),
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: const Icon(
+              Icons.location_history_outlined,
+              size: 24.0,
+            ),
+            activeIcon: const Icon(
+              Icons.location_history_rounded,
+              size: 24.0,
+            ),
+            label: FFLocalizations.of(context).getText(
+              '6wurewfp' /* 客户 */,
+            ),
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: const Icon(
+              Icons.message_outlined,
+              size: 24.0,
+            ),
+            activeIcon: const Icon(
+              Icons.message_sharp,
+              size: 24.0,
+            ),
+            label: FFLocalizations.of(context).getText(
+              'pwjd77z2' /* 支持 */,
             ),
             tooltip: '',
           ),

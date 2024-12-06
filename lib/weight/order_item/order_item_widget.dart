@@ -150,7 +150,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'SF Pro Display',
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: FlutterFlowTheme.of(context).accent4,
                                     fontSize: 13.0,
                                     letterSpacing: 0.0,
                                     useGoogleFonts: false,
@@ -163,7 +163,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'SF Pro Display',
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: FlutterFlowTheme.of(context).accent4,
                                     fontSize: 13.0,
                                     letterSpacing: 0.0,
                                     useGoogleFonts: false,
@@ -211,12 +211,9 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                       FFLocalizations.of(context).getText(
                         '6jlbymsz' /* 总计 790 $ */,
                       ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      style: FlutterFlowTheme.of(context).labelMedium.override(
                             fontFamily: 'SF Pro Display',
-                            color: FlutterFlowTheme.of(context).info,
-                            fontSize: 15.0,
                             letterSpacing: 0.0,
-                            fontWeight: FontWeight.bold,
                             useGoogleFonts: false,
                           ),
                     ),

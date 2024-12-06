@@ -246,9 +246,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'CouponsettingsPage',
           path: '/couponsettingsPage',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'CouponsettingsPage')
-              : const CouponsettingsPageWidget(),
+          builder: (context, params) => const CouponsettingsPageWidget(),
         ),
         FFRoute(
           name: 'CreateCouponsettingsPage',
@@ -317,7 +315,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'OrderPage',
           path: '/orderPage',
-          builder: (context, params) => const OrderPageWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'OrderPage')
+              : const OrderPageWidget(),
         ),
         FFRoute(
           name: 'ProfilePage',
@@ -325,6 +325,75 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'ProfilePage')
               : const ProfilePageWidget(),
+        ),
+        FFRoute(
+          name: 'Channelbinding',
+          path: '/channelbinding',
+          builder: (context, params) => const ChannelbindingWidget(),
+        ),
+        FFRoute(
+          name: 'ClientPage',
+          path: '/clientPage',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'ClientPage')
+              : const ClientPageWidget(),
+        ),
+        FFRoute(
+          name: 'SupportPage',
+          path: '/supportPage',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'SupportPage')
+              : const SupportPageWidget(),
+        ),
+        FFRoute(
+          name: 'SupportDetailPage',
+          path: '/supportDetailPage',
+          builder: (context, params) => const SupportDetailPageWidget(),
+        ),
+        FFRoute(
+          name: 'NewRoleUser',
+          path: '/newRoleUser',
+          builder: (context, params) => const NewRoleUserWidget(),
+        ),
+        FFRoute(
+          name: 'PriceSheetPage',
+          path: '/priceSheetPage',
+          builder: (context, params) => const PriceSheetPageWidget(),
+        ),
+        FFRoute(
+          name: 'AdminPriceDetail',
+          path: '/adminPriceDetail',
+          builder: (context, params) => const AdminPriceDetailWidget(),
+        ),
+        FFRoute(
+          name: 'PriceSheetDetail',
+          path: '/priceSheetDetail',
+          builder: (context, params) => const PriceSheetDetailWidget(),
+        ),
+        FFRoute(
+          name: 'EditPriceSheetPage',
+          path: '/editPriceSheetPage',
+          builder: (context, params) => const EditPriceSheetPageWidget(),
+        ),
+        FFRoute(
+          name: 'NewDetailPage',
+          path: '/newDetailPage',
+          builder: (context, params) => const NewDetailPageWidget(),
+        ),
+        FFRoute(
+          name: 'ExchangeRatePage',
+          path: '/exchangeRatePage',
+          builder: (context, params) => const ExchangeRatePageWidget(),
+        ),
+        FFRoute(
+          name: 'WarehouseAddressPage',
+          path: '/warehouseAddressPage',
+          builder: (context, params) => const WarehouseAddressPageWidget(),
+        ),
+        FFRoute(
+          name: 'DestinationPage',
+          path: '/destinationPage',
+          builder: (context, params) => const DestinationPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

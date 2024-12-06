@@ -46,10 +46,30 @@ class _StepsWidgetState extends State<StepsWidget> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(26.0, 0.0, 15.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 12.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
+                  Container(
+                    width: 7.0,
+                    height: 7.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primary,
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: FlutterFlowTheme.of(context).info,
+                        width: 1.0,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: 2.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).primary,
+                      ),
+                    ),
+                  ),
                   Container(
                     width: 7.0,
                     height: 7.0,
@@ -102,6 +122,26 @@ class _StepsWidgetState extends State<StepsWidget> {
                       ),
                     ),
                   ),
+                  Expanded(
+                    child: Container(
+                      height: 2.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 7.0,
+                    height: 7.0,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF999999),
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        width: 1.0,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -111,7 +151,7 @@ class _StepsWidgetState extends State<StepsWidget> {
               children: [
                 Text(
                   FFLocalizations.of(context).getText(
-                    'nsmi26dh' /* Shipped */,
+                    'nsmi26dh' /* 入仓 */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'SF Pro Display',
@@ -123,7 +163,7 @@ class _StepsWidgetState extends State<StepsWidget> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'sm8sti9m' /* Customs cleared */,
+                    'us1rqkia' /* 确认打包 */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'SF Pro Display',
@@ -135,7 +175,31 @@ class _StepsWidgetState extends State<StepsWidget> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    'yplucg2m' /* Have arrived */,
+                    'sm8sti9m' /* 打包中 */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'SF Pro Display',
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        fontSize: 9.0,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: false,
+                      ),
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    'srvhzhqo' /* 打包完毕 */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'SF Pro Display',
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        fontSize: 9.0,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: false,
+                      ),
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    'yplucg2m' /* 确认发货 */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'SF Pro Display',

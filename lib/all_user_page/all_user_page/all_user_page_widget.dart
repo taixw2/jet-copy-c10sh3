@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:provider/provider.dart';
 import 'all_user_page_model.dart';
 export 'all_user_page_model.dart';
 
@@ -22,9 +24,6 @@ class _AllUserPageWidgetState extends State<AllUserPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AllUserPageModel());
-
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
   }
 
   @override
@@ -36,6 +35,8 @@ class _AllUserPageWidgetState extends State<AllUserPageWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -60,7 +61,7 @@ class _AllUserPageWidgetState extends State<AllUserPageWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              '8sr1lasr' /* All user */,
+              '8sr1lasr' /* 角色 */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'SF Pro Display',
@@ -70,7 +71,29 @@ class _AllUserPageWidgetState extends State<AllUserPageWidget> {
                   useGoogleFonts: false,
                 ),
           ),
-          actions: const [],
+          actions: [
+            FFButtonWidget(
+              onPressed: () async {
+                context.pushNamed('NewRoleUser');
+              },
+              text: FFLocalizations.of(context).getText(
+                'caxwai84' /* 新增 */,
+              ),
+              options: FFButtonOptions(
+                height: 40.0,
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                color: const Color(0x00FF7D00),
+                textStyle: FlutterFlowTheme.of(context).displaySmall.override(
+                      fontFamily: 'SF Pro Display',
+                      letterSpacing: 0.0,
+                      useGoogleFonts: false,
+                    ),
+                elevation: 0.0,
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+            ),
+          ],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -81,72 +104,6 @@ class _AllUserPageWidgetState extends State<AllUserPageWidget> {
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                  child: SizedBox(
-                    width: MediaQuery.sizeOf(context).width * 1.0,
-                    child: TextFormField(
-                      controller: _model.textController,
-                      focusNode: _model.textFieldFocusNode,
-                      autofocus: false,
-                      obscureText: false,
-                      decoration: InputDecoration(
-                        isDense: true,
-                        labelStyle:
-                            FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'SF Pro Display',
-                                  letterSpacing: 0.0,
-                                  useGoogleFonts: false,
-                                ),
-                        hintStyle:
-                            FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'SF Pro Display',
-                                  letterSpacing: 0.0,
-                                  useGoogleFonts: false,
-                                ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                            color: Color(0x00000000),
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(24.0),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                            color: Color(0x00000000),
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(24.0),
-                        ),
-                        errorBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).error,
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(24.0),
-                        ),
-                        focusedErrorBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).error,
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(24.0),
-                        ),
-                        filled: true,
-                        fillColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
-                      ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'SF Pro Display',
-                            letterSpacing: 0.0,
-                            useGoogleFonts: false,
-                          ),
-                      cursorColor: FlutterFlowTheme.of(context).primaryText,
-                      validator:
-                          _model.textControllerValidator.asValidator(context),
-                    ),
-                  ),
-                ),
                 Padding(
                   padding:
                       const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
@@ -185,139 +142,60 @@ class _AllUserPageWidgetState extends State<AllUserPageWidget> {
                               borderRadius: BorderRadius.circular(24.0),
                             ),
                           ),
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              '5iwvr61e' /* Admin */,
-                            ),
-                            options: FFButtonOptions(
-                              height: 32.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'SF Pro Display',
-                                    color: Colors.white,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
+                          Expanded(
+                            child: Builder(
+                              builder: (context) {
+                                final roleselect =
+                                    FFAppState().ROLETYPE.toList();
+
+                                return SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: List.generate(roleselect.length,
+                                        (roleselectIndex) {
+                                      final roleselectItem =
+                                          roleselect[roleselectIndex];
+                                      return FFButtonWidget(
+                                        onPressed: () {
+                                          print('Button pressed ...');
+                                        },
+                                        text: valueOrDefault<String>(
+                                          getJsonField(
+                                            roleselectItem,
+                                            r'''$.label''',
+                                          )?.toString(),
+                                          '-',
+                                        ),
+                                        options: FFButtonOptions(
+                                          height: 40.0,
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  16.0, 0.0, 16.0, 0.0),
+                                          iconPadding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmall
+                                                  .override(
+                                                    fontFamily:
+                                                        'SF Pro Display',
+                                                    color: Colors.white,
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
+                                          elevation: 0.0,
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                      );
+                                    }).divide(const SizedBox(width: 8.0)),
                                   ),
-                              elevation: 0.0,
-                              borderRadius: BorderRadius.circular(24.0),
-                            ),
-                          ),
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              '7zlq84el' /* Client */,
-                            ),
-                            options: FFButtonOptions(
-                              height: 32.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'SF Pro Display',
-                                    color: Colors.white,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
-                              elevation: 0.0,
-                              borderRadius: BorderRadius.circular(24.0),
-                            ),
-                          ),
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'qfdpjdwh' /* Manager */,
-                            ),
-                            options: FFButtonOptions(
-                              height: 32.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'SF Pro Display',
-                                    color: Colors.white,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
-                              elevation: 0.0,
-                              borderRadius: BorderRadius.circular(24.0),
-                            ),
-                          ),
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'gnhvx8iq' /* Agent */,
-                            ),
-                            options: FFButtonOptions(
-                              height: 32.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'SF Pro Display',
-                                    color: Colors.white,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
-                              elevation: 0.0,
-                              borderRadius: BorderRadius.circular(24.0),
-                            ),
-                          ),
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'n5x6agf4' /* Dispatcher */,
-                            ),
-                            options: FFButtonOptions(
-                              height: 32.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'SF Pro Display',
-                                    color: Colors.white,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
-                              elevation: 0.0,
-                              borderRadius: BorderRadius.circular(24.0),
+                                );
+                              },
                             ),
                           ),
                         ].divide(const SizedBox(width: 8.0)),
@@ -325,82 +203,451 @@ class _AllUserPageWidgetState extends State<AllUserPageWidget> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          context.pushNamed('UserInfoPage');
-                        },
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 12.0, 16.0, 12.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(24.0),
-                                    child: Image.network(
-                                      'https://picsum.photos/seed/145/600',
-                                      width: 30.0,
-                                      height: 30.0,
-                                      fit: BoxFit.cover,
-                                    ),
+                Expanded(
+                  child: Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Slidable(
+                            endActionPane: ActionPane(
+                              motion: const ScrollMotion(),
+                              extentRatio: 0.25,
+                              children: [
+                                SlidableAction(
+                                  label: FFLocalizations.of(context).getText(
+                                    'emesgkhy' /* 删除 */,
                                   ),
-                                  Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          FFLocalizations.of(context).getText(
-                                            'yc2bdnio' /* JL-444 Joe Wilson */,
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .labelLarge
-                                              .override(
-                                                fontFamily: 'SF Pro Display',
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts: false,
-                                              ),
-                                        ),
-                                        Text(
-                                          FFLocalizations.of(context).getText(
-                                            'd8e2hhjc' /* Client｜Email:joewilson@gmail.c... */,
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodySmall
-                                              .override(
-                                                fontFamily: 'SF Pro Display',
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts: false,
-                                              ),
-                                        ),
-                                      ],
-                                    ),
+                                  backgroundColor:
+                                      FlutterFlowTheme.of(context).error,
+                                  icon: Icons.delete_outline_rounded,
+                                  onPressed: (_) {
+                                    print('SlidableActionWidget pressed ...');
+                                  },
+                                ),
+                              ],
+                            ),
+                            child: Material(
+                              color: Colors.transparent,
+                              child: ListTile(
+                                title: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'x67mt5cd' /* SUNNY */,
                                   ),
-                                ].divide(const SizedBox(width: 12.0)),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                subtitle: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'fvfqy3is' /* 管理员 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                trailing: Icon(
+                                  Icons.mode,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 18.0,
+                                ),
+                                tileColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                dense: false,
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 0.0, 12.0, 0.0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
                               ),
                             ),
-                            Divider(
-                              height: 1.0,
-                              thickness: 1.0,
-                              color: FlutterFlowTheme.of(context).borderColor,
+                          ),
+                          Slidable(
+                            endActionPane: ActionPane(
+                              motion: const ScrollMotion(),
+                              extentRatio: 0.25,
+                              children: [
+                                SlidableAction(
+                                  label: FFLocalizations.of(context).getText(
+                                    'er18n1l0' /* 删除 */,
+                                  ),
+                                  backgroundColor:
+                                      FlutterFlowTheme.of(context).error,
+                                  icon: Icons.delete_outline_rounded,
+                                  onPressed: (_) {
+                                    print('SlidableActionWidget pressed ...');
+                                  },
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                            child: Material(
+                              color: Colors.transparent,
+                              child: ListTile(
+                                title: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'ixs0jabw' /* SUNNY */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                subtitle: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'c6tzy0x9' /* 管理员 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                trailing: Icon(
+                                  Icons.mode,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 18.0,
+                                ),
+                                tileColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                dense: false,
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 0.0, 12.0, 0.0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Slidable(
+                            endActionPane: ActionPane(
+                              motion: const ScrollMotion(),
+                              extentRatio: 0.25,
+                              children: [
+                                SlidableAction(
+                                  label: FFLocalizations.of(context).getText(
+                                    'htrsab5k' /* 删除 */,
+                                  ),
+                                  backgroundColor:
+                                      FlutterFlowTheme.of(context).error,
+                                  icon: Icons.delete_outline_rounded,
+                                  onPressed: (_) {
+                                    print('SlidableActionWidget pressed ...');
+                                  },
+                                ),
+                              ],
+                            ),
+                            child: Material(
+                              color: Colors.transparent,
+                              child: ListTile(
+                                title: Text(
+                                  FFLocalizations.of(context).getText(
+                                    '4vubxol7' /* SUNNY */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                subtitle: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'fq47594h' /* 管理员 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                trailing: Icon(
+                                  Icons.mode,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 18.0,
+                                ),
+                                tileColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                dense: false,
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 0.0, 12.0, 0.0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Slidable(
+                            endActionPane: ActionPane(
+                              motion: const ScrollMotion(),
+                              extentRatio: 0.25,
+                              children: [
+                                SlidableAction(
+                                  label: FFLocalizations.of(context).getText(
+                                    'gcshlqyr' /* 删除 */,
+                                  ),
+                                  backgroundColor:
+                                      FlutterFlowTheme.of(context).error,
+                                  icon: Icons.delete_outline_rounded,
+                                  onPressed: (_) {
+                                    print('SlidableActionWidget pressed ...');
+                                  },
+                                ),
+                              ],
+                            ),
+                            child: Material(
+                              color: Colors.transparent,
+                              child: ListTile(
+                                title: Text(
+                                  FFLocalizations.of(context).getText(
+                                    '4bsuwnzm' /* SUNNY */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                subtitle: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'pvtipnk1' /* 管理员 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                trailing: Icon(
+                                  Icons.mode,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 18.0,
+                                ),
+                                tileColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                dense: false,
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 0.0, 12.0, 0.0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Slidable(
+                            endActionPane: ActionPane(
+                              motion: const ScrollMotion(),
+                              extentRatio: 0.25,
+                              children: [
+                                SlidableAction(
+                                  label: FFLocalizations.of(context).getText(
+                                    'jrxn01tz' /* 删除 */,
+                                  ),
+                                  backgroundColor:
+                                      FlutterFlowTheme.of(context).error,
+                                  icon: Icons.delete_outline_rounded,
+                                  onPressed: (_) {
+                                    print('SlidableActionWidget pressed ...');
+                                  },
+                                ),
+                              ],
+                            ),
+                            child: Material(
+                              color: Colors.transparent,
+                              child: ListTile(
+                                title: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'ovlfb6cg' /* SUNNY */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                subtitle: Text(
+                                  FFLocalizations.of(context).getText(
+                                    '9myru30h' /* 管理员 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                trailing: Icon(
+                                  Icons.mode,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 18.0,
+                                ),
+                                tileColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                dense: false,
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 0.0, 12.0, 0.0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Slidable(
+                            endActionPane: ActionPane(
+                              motion: const ScrollMotion(),
+                              extentRatio: 0.25,
+                              children: [
+                                SlidableAction(
+                                  label: FFLocalizations.of(context).getText(
+                                    'ne7ahs89' /* 删除 */,
+                                  ),
+                                  backgroundColor:
+                                      FlutterFlowTheme.of(context).error,
+                                  icon: Icons.delete_outline_rounded,
+                                  onPressed: (_) {
+                                    print('SlidableActionWidget pressed ...');
+                                  },
+                                ),
+                              ],
+                            ),
+                            child: Material(
+                              color: Colors.transparent,
+                              child: ListTile(
+                                title: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'yoc1s5ko' /* SUNNY */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                subtitle: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'fo5qaqet' /* 管理员 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                trailing: Icon(
+                                  Icons.mode,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 18.0,
+                                ),
+                                tileColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                dense: false,
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 0.0, 12.0, 0.0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Slidable(
+                            endActionPane: ActionPane(
+                              motion: const ScrollMotion(),
+                              extentRatio: 0.25,
+                              children: [
+                                SlidableAction(
+                                  label: FFLocalizations.of(context).getText(
+                                    'yvcgq3xm' /* 删除 */,
+                                  ),
+                                  backgroundColor:
+                                      FlutterFlowTheme.of(context).error,
+                                  icon: Icons.delete_outline_rounded,
+                                  onPressed: (_) {
+                                    print('SlidableActionWidget pressed ...');
+                                  },
+                                ),
+                              ],
+                            ),
+                            child: Material(
+                              color: Colors.transparent,
+                              child: ListTile(
+                                title: Text(
+                                  FFLocalizations.of(context).getText(
+                                    '2nc1np9x' /* SUNNY */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                subtitle: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'lejzon6q' /* 管理员 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'SF Pro Display',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
+                                ),
+                                trailing: Icon(
+                                  Icons.mode,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 18.0,
+                                ),
+                                tileColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                dense: false,
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 0.0, 12.0, 0.0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ].divide(const SizedBox(height: 12.0)),
                       ),
-                    ].divide(const SizedBox(height: 12.0)),
+                    ),
                   ),
                 ),
               ],

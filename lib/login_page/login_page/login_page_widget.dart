@@ -111,6 +111,21 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       children: [
                         FFButtonWidget(
                           onPressed: () async {
+                            FFAppState().ROLE = (String var1) {
+                              return var1 == "admin"
+                                  ? "admin"
+                                  : var1 == "client"
+                                      ? "client"
+                                      : var1 == "moban"
+                                          ? "moban"
+                                          : var1 == "agent"
+                                              ? "agent"
+                                              : var1 == "finance"
+                                                  ? "finance"
+                                                  : "admin";
+                            }(_model.labelInputModel1.textController.text);
+                            safeSetState(() {});
+
                             context.pushNamed('HomePage');
                           },
                           text: FFLocalizations.of(context).getText(

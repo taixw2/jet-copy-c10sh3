@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/weight/label_input/label_input_widget.dart';
-import '/weight/order_item/order_item_widget.dart';
 import '/weight/title/title_widget.dart';
 import 'order_detail_widget.dart' show OrderDetailWidget;
 import 'package:flutter/material.dart';
@@ -9,20 +8,48 @@ import 'package:flutter/material.dart';
 class OrderDetailModel extends FlutterFlowModel<OrderDetailWidget> {
   ///  State fields for stateful widgets in this page.
 
-  // Model for OrderItem component.
-  late OrderItemModel orderItemModel;
-  // Model for Title component.
-  late TitleModel titleModel1;
+  // State field(s) for DropDown widget.
+  String? dropDownValue1;
+  FormFieldController<String>? dropDownValueController1;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode1;
+  TextEditingController? textController1;
+  String? Function(BuildContext, String?)? textController1Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode2;
+  TextEditingController? textController2;
+  String? Function(BuildContext, String?)? textController2Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode3;
+  TextEditingController? textController3;
+  String? Function(BuildContext, String?)? textController3Validator;
+  // State field(s) for DropDown widget.
+  String? dropDownValue2;
+  FormFieldController<String>? dropDownValueController2;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode4;
+  TextEditingController? textController4;
+  String? Function(BuildContext, String?)? textController4Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode5;
+  TextEditingController? textController5;
+  String? Function(BuildContext, String?)? textController5Validator;
+  // State field(s) for DropDown widget.
+  String? dropDownValue3;
+  FormFieldController<String>? dropDownValueController3;
   // Model for LabelInput component.
   late LabelInputModel labelInputModel1;
   // Model for LabelInput component.
   late LabelInputModel labelInputModel2;
   // Model for LabelInput component.
   late LabelInputModel labelInputModel3;
+  // State field(s) for DropDown widget.
+  String? dropDownValue4;
+  FormFieldController<String>? dropDownValueController4;
+  // Model for Title component.
+  late TitleModel titleModel1;
   // Model for LabelInput component.
   late LabelInputModel labelInputModel4;
-  // Model for Title component.
-  late TitleModel titleModel2;
   // Model for LabelInput component.
   late LabelInputModel labelInputModel5;
   // Model for LabelInput component.
@@ -31,84 +58,64 @@ class OrderDetailModel extends FlutterFlowModel<OrderDetailWidget> {
   late LabelInputModel labelInputModel7;
   // Model for LabelInput component.
   late LabelInputModel labelInputModel8;
-  // State field(s) for DropDown widget.
-  String? dropDownValue;
-  FormFieldController<String>? dropDownValueController;
-  // Model for Title component.
-  late TitleModel titleModel3;
   // Model for LabelInput component.
   late LabelInputModel labelInputModel9;
-  // Model for LabelInput component.
-  late LabelInputModel labelInputModel10;
-  // Model for LabelInput component.
-  late LabelInputModel labelInputModel11;
-  // Model for LabelInput component.
-  late LabelInputModel labelInputModel12;
-  // Model for LabelInput component.
-  late LabelInputModel labelInputModel13;
-  // Model for LabelInput component.
-  late LabelInputModel labelInputModel14;
-  // Model for LabelInput component.
-  late LabelInputModel labelInputModel15;
   // Model for Title component.
-  late TitleModel titleModel4;
+  late TitleModel titleModel2;
   // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  FocusNode? textFieldFocusNode6;
+  TextEditingController? textController6;
+  String? Function(BuildContext, String?)? textController6Validator;
   // Model for Title component.
-  late TitleModel titleModel5;
+  late TitleModel titleModel3;
 
   @override
   void initState(BuildContext context) {
-    orderItemModel = createModel(context, () => OrderItemModel());
-    titleModel1 = createModel(context, () => TitleModel());
     labelInputModel1 = createModel(context, () => LabelInputModel());
     labelInputModel2 = createModel(context, () => LabelInputModel());
     labelInputModel3 = createModel(context, () => LabelInputModel());
+    titleModel1 = createModel(context, () => TitleModel());
     labelInputModel4 = createModel(context, () => LabelInputModel());
-    titleModel2 = createModel(context, () => TitleModel());
     labelInputModel5 = createModel(context, () => LabelInputModel());
     labelInputModel6 = createModel(context, () => LabelInputModel());
     labelInputModel7 = createModel(context, () => LabelInputModel());
     labelInputModel8 = createModel(context, () => LabelInputModel());
-    titleModel3 = createModel(context, () => TitleModel());
     labelInputModel9 = createModel(context, () => LabelInputModel());
-    labelInputModel10 = createModel(context, () => LabelInputModel());
-    labelInputModel11 = createModel(context, () => LabelInputModel());
-    labelInputModel12 = createModel(context, () => LabelInputModel());
-    labelInputModel13 = createModel(context, () => LabelInputModel());
-    labelInputModel14 = createModel(context, () => LabelInputModel());
-    labelInputModel15 = createModel(context, () => LabelInputModel());
-    titleModel4 = createModel(context, () => TitleModel());
-    titleModel5 = createModel(context, () => TitleModel());
+    titleModel2 = createModel(context, () => TitleModel());
+    titleModel3 = createModel(context, () => TitleModel());
   }
 
   @override
   void dispose() {
-    orderItemModel.dispose();
-    titleModel1.dispose();
+    textFieldFocusNode1?.dispose();
+    textController1?.dispose();
+
+    textFieldFocusNode2?.dispose();
+    textController2?.dispose();
+
+    textFieldFocusNode3?.dispose();
+    textController3?.dispose();
+
+    textFieldFocusNode4?.dispose();
+    textController4?.dispose();
+
+    textFieldFocusNode5?.dispose();
+    textController5?.dispose();
+
     labelInputModel1.dispose();
     labelInputModel2.dispose();
     labelInputModel3.dispose();
+    titleModel1.dispose();
     labelInputModel4.dispose();
-    titleModel2.dispose();
     labelInputModel5.dispose();
     labelInputModel6.dispose();
     labelInputModel7.dispose();
     labelInputModel8.dispose();
-    titleModel3.dispose();
     labelInputModel9.dispose();
-    labelInputModel10.dispose();
-    labelInputModel11.dispose();
-    labelInputModel12.dispose();
-    labelInputModel13.dispose();
-    labelInputModel14.dispose();
-    labelInputModel15.dispose();
-    titleModel4.dispose();
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    titleModel2.dispose();
+    textFieldFocusNode6?.dispose();
+    textController6?.dispose();
 
-    titleModel5.dispose();
+    titleModel3.dispose();
   }
 }

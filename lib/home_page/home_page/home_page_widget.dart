@@ -10,7 +10,9 @@ import '/weight/today_exchange_rate/today_exchange_rate_widget.dart';
 import '/weight/warehouse_address/warehouse_address_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
+import 'package:provider/provider.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
 
@@ -30,6 +32,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => HomePageModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      context.pushNamed('OrderPage');
+    });
   }
 
   @override
@@ -41,6 +48,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -90,9 +99,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                               ),
                               Text(
-                                FFLocalizations.of(context).getText(
-                                  '9wq916wu' /* 管理员 */,
-                                ),
+                                (String var1) {
+                                  return var1 == "admin" ? "管理员" : "客户";
+                                }(FFAppState().ROLE),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -449,124 +458,28 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               ),
                             ],
                           ),
-                          Container(
-                            width: MediaQuery.sizeOf(context).width * 1.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 16.0, 16.0, 16.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Expanded(
-                                        flex: 3,
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    '27faf46e' /* 总发货量 */,
-                                                  ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'SF Pro Display',
-                                                        letterSpacing: 0.0,
-                                                        useGoogleFonts: false,
-                                                      ),
-                                                ),
-                                                AutoSizeText(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'npcpfwlj' /* 1.789.98m3288.937.00kg */,
-                                                  ),
-                                                  minFontSize: 12.0,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .displaySmall
-                                                      .override(
-                                                        fontFamily:
-                                                            'SF Pro Display',
-                                                        letterSpacing: 0.0,
-                                                        useGoogleFonts: false,
-                                                      ),
-                                                ),
-                                              ].divide(const SizedBox(height: 4.0)),
-                                            ),
-                                            Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    '5wvr09yp' /* 总到货量 */,
-                                                  ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'SF Pro Display',
-                                                        letterSpacing: 0.0,
-                                                        useGoogleFonts: false,
-                                                      ),
-                                                ),
-                                                Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'do7ai7fe' /* 1.544.45m3288.937.0 */,
-                                                  ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .displaySmall
-                                                      .override(
-                                                        fontFamily:
-                                                            'SF Pro Display',
-                                                        letterSpacing: 0.0,
-                                                        useGoogleFonts: false,
-                                                      ),
-                                                ),
-                                              ].divide(const SizedBox(height: 4.0)),
-                                            ),
-                                          ].divide(const SizedBox(height: 16.0)),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 100.0,
-                                        child: VerticalDivider(
-                                          thickness: 1.0,
-                                          color: FlutterFlowTheme.of(context)
-                                              .borderColor,
-                                        ),
-                                      ),
-                                      Expanded(
-                                        flex: 2,
-                                        child: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  8.0, 0.0, 0.0, 0.0),
+                          if (FFAppState().ROLE == 'admin')
+                            Container(
+                              width: MediaQuery.sizeOf(context).width * 1.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 16.0, 16.0, 16.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Expanded(
+                                          flex: 3,
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
@@ -580,7 +493,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'b6tb91hf' /* 发货总利润 */,
+                                                      '27faf46e' /* 总发货量 */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -592,11 +505,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           useGoogleFonts: false,
                                                         ),
                                                   ),
-                                                  Text(
+                                                  AutoSizeText(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      '0gynx2le' /* 22.376.504$  */,
+                                                      'npcpfwlj' /* 1.789.98m3288.937.00kg */,
                                                     ),
+                                                    minFontSize: 12.0,
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .displaySmall
@@ -617,7 +531,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'tdky7176' /* 到货总利润 */,
+                                                      '5wvr09yp' /* 总到货量 */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -632,7 +546,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'l0m1yzi3' /* 2.304$  */,
+                                                      'do7ai7fe' /* 1.544.45m3288.937.0 */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -649,46 +563,40 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             ].divide(const SizedBox(height: 16.0)),
                                           ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Expanded(
-                                            child: Container(
-                                              width: double.infinity,
-                                              height: 32.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .thirdBackground,
-                                                borderRadius:
-                                                    BorderRadius.circular(4.0),
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
-                                                child: Row(
+                                        SizedBox(
+                                          height: 100.0,
+                                          child: VerticalDivider(
+                                            thickness: 1.0,
+                                            color: FlutterFlowTheme.of(context)
+                                                .borderColor,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          flex: 2,
+                                          child: Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    8.0, 0.0, 0.0, 0.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        '8p07n1eq' /* 经理总额 */,
+                                                        'b6tb91hf' /* 发货总利润 */,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
-                                                          .labelSmall
+                                                          .labelMedium
                                                           .override(
                                                             fontFamily:
                                                                 'SF Pro Display',
@@ -701,11 +609,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'ia0p1lbm' /* 900.000$ */,
+                                                        '0gynx2le' /* 22.376.504$  */,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
-                                                          .labelSmall
+                                                          .displaySmall
                                                           .override(
                                                             fontFamily:
                                                                 'SF Pro Display',
@@ -714,42 +622,24 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 false,
                                                           ),
                                                     ),
-                                                  ],
+                                                  ].divide(
+                                                      const SizedBox(height: 4.0)),
                                                 ),
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: Container(
-                                              width: double.infinity,
-                                              height: 32.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .thirdBackground,
-                                                borderRadius:
-                                                    BorderRadius.circular(4.0),
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
-                                                child: Row(
+                                                Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'y2qvue8z' /* 代理总额 */,
+                                                        'tdky7176' /* 到货总利润 */,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
-                                                          .labelSmall
+                                                          .labelMedium
                                                           .override(
                                                             fontFamily:
                                                                 'SF Pro Display',
@@ -762,11 +652,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'vafwgu9y' /* 9000.000$ */,
+                                                        'l0m1yzi3' /* 2.304$  */,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
-                                                          .labelSmall
+                                                          .displaySmall
                                                           .override(
                                                             fontFamily:
                                                                 'SF Pro Display',
@@ -775,273 +665,622 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 false,
                                                           ),
                                                     ),
-                                                  ],
+                                                  ].divide(
+                                                      const SizedBox(height: 4.0)),
+                                                ),
+                                              ].divide(const SizedBox(height: 16.0)),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Expanded(
+                                              child: Container(
+                                                width: double.infinity,
+                                                height: 32.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .thirdBackground,
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          4.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          12.0, 0.0, 12.0, 0.0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '8p07n1eq' /* 经理总额 */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                      ),
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'ia0p1lbm' /* 900.000$ */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                        ].divide(const SizedBox(width: 8.0)),
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Expanded(
-                                            child: Container(
-                                              width: double.infinity,
-                                              height: 32.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .thirdBackground,
-                                                borderRadius:
-                                                    BorderRadius.circular(4.0),
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
-                                                  children: [
-                                                    Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'qm9jyr3o' /* 国外卸货费 */,
+                                            Expanded(
+                                              child: Container(
+                                                width: double.infinity,
+                                                height: 32.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .thirdBackground,
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          4.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          12.0, 0.0, 12.0, 0.0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'y2qvue8z' /* 代理总额 */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'SF Pro Display',
-                                                            letterSpacing: 0.0,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                    Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'vgjkomm4' /* 90$ */,
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'vafwgu9y' /* 9000.000$ */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'SF Pro Display',
-                                                            letterSpacing: 0.0,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                          Expanded(
-                                            child: Container(
-                                              width: double.infinity,
-                                              height: 32.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .thirdBackground,
-                                                borderRadius:
-                                                    BorderRadius.circular(4.0),
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
-                                                  children: [
-                                                    Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'qdbegvcl' /* 总打包费 */,
+                                          ].divide(const SizedBox(width: 8.0)),
+                                        ),
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Expanded(
+                                              child: Container(
+                                                width: double.infinity,
+                                                height: 32.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .thirdBackground,
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          4.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          12.0, 0.0, 12.0, 0.0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'qm9jyr3o' /* 国外卸货费 */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'SF Pro Display',
-                                                            letterSpacing: 0.0,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                    Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'fh654sto' /* 9000.000$ */,
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'vgjkomm4' /* 90$ */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'SF Pro Display',
-                                                            letterSpacing: 0.0,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                        ].divide(const SizedBox(width: 8.0)),
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Expanded(
-                                            child: Container(
-                                              width: double.infinity,
-                                              height: 32.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .thirdBackground,
-                                                borderRadius:
-                                                    BorderRadius.circular(4.0),
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
-                                                  children: [
-                                                    Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'v82qmpp4' /* 国外莫办余额 */,
+                                            Expanded(
+                                              child: Container(
+                                                width: double.infinity,
+                                                height: 32.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .thirdBackground,
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          4.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          12.0, 0.0, 12.0, 0.0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'qdbegvcl' /* 总打包费 */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'SF Pro Display',
-                                                            letterSpacing: 0.0,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                    Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '87zt40od' /* 9.000$ */,
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'fh654sto' /* 9000.000$ */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'SF Pro Display',
-                                                            letterSpacing: 0.0,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                          Expanded(
-                                            child: Container(
-                                              width: double.infinity,
-                                              height: 32.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .thirdBackground,
-                                                borderRadius:
-                                                    BorderRadius.circular(4.0),
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
-                                                  children: [
-                                                    Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'o7v4jbqg' /* 客户总量 */,
+                                          ].divide(const SizedBox(width: 8.0)),
+                                        ),
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Expanded(
+                                              child: Container(
+                                                width: double.infinity,
+                                                height: 32.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .thirdBackground,
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          4.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          12.0, 0.0, 12.0, 0.0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'v82qmpp4' /* 国外莫办余额 */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'SF Pro Display',
-                                                            letterSpacing: 0.0,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                    Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '7xua9l57' /* 90人 */,
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '87zt40od' /* 9.000$ */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'SF Pro Display',
-                                                            letterSpacing: 0.0,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                        ].divide(const SizedBox(width: 8.0)),
-                                      ),
-                                    ].divide(const SizedBox(height: 8.0)),
-                                  ),
-                                ].divide(const SizedBox(height: 16.0)),
+                                            Expanded(
+                                              child: Container(
+                                                width: double.infinity,
+                                                height: 32.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .thirdBackground,
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          4.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          12.0, 0.0, 12.0, 0.0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'o7v4jbqg' /* 客户总量 */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                      ),
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '7xua9l57' /* 90人 */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ].divide(const SizedBox(width: 8.0)),
+                                        ),
+                                      ].divide(const SizedBox(height: 8.0)),
+                                    ),
+                                  ].divide(const SizedBox(height: 16.0)),
+                                ),
                               ),
                             ),
-                          ),
+                          if (FFAppState().ROLE == 'client')
+                            Container(
+                              width: MediaQuery.sizeOf(context).width * 1.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 16.0, 16.0, 16.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Expanded(
+                                          flex: 3,
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'vtl458b1' /* 总发货量 */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .labelMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'SF Pro Display',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                  AutoSizeText(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'ten9tcpz' /* 1.789.98m3288.937.00kg */,
+                                                    ),
+                                                    minFontSize: 12.0,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .displaySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'SF Pro Display',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ].divide(const SizedBox(height: 4.0)),
+                                              ),
+                                              Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'oebith20' /* 总到货量 */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .labelMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'SF Pro Display',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                  Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'v6n8st23' /* 1.544.45m3288.937.0 */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .displaySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'SF Pro Display',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ].divide(const SizedBox(height: 4.0)),
+                                              ),
+                                            ].divide(const SizedBox(height: 16.0)),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Expanded(
+                                              child: Container(
+                                                width: double.infinity,
+                                                height: 32.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .thirdBackground,
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          4.0),
+                                                ),
+                                                child: Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          12.0, 0.0, 12.0, 0.0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'sjkwy6r0' /* 未结算金额 */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                      ),
+                                                      Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'otuxgvf1' /* 900.000$ */,
+                                                        ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'SF Pro Display',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ].divide(const SizedBox(width: 8.0)),
+                                        ),
+                                      ].divide(const SizedBox(height: 8.0)),
+                                    ),
+                                  ].divide(const SizedBox(height: 16.0)),
+                                ),
+                              ),
+                            ),
                         ],
                       ),
                     ),
@@ -1053,69 +1292,81 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       width: double.infinity,
                       height: 77.0,
                       decoration: const BoxDecoration(),
-                      child: Stack(
-                        children: [
-                          Align(
-                            alignment: const AlignmentDirectional(0.0, 0.81),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
-                              child: Image.asset(
-                                'assets/images/1b07fd8e256a777958737e2f5b90e5ee6570f21bce83-Vohw1u_fw1200.png',
-                                width: double.infinity,
-                                height: 56.0,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                18.0, 0.0, 0.0, 0.0),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
-                              child: Image.asset(
-                                'assets/images/bjqdicon.png',
-                                width: 84.0,
-                                height: 77.0,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Align(
-                            alignment: const AlignmentDirectional(-1.0, 0.0),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  110.0, 15.0, 0.0, 0.0),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'jxynhym2' /* 绑定渠道 */,
+                      child: Visibility(
+                        visible: FFAppState().ROLE == 'admin',
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('Channelbinding');
+                          },
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: const AlignmentDirectional(0.0, 0.81),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.asset(
+                                    'assets/images/1b07fd8e256a777958737e2f5b90e5ee6570f21bce83-Vohw1u_fw1200.png',
+                                    width: double.infinity,
+                                    height: 56.0,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      fontFamily: 'SF Pro Display',
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts: false,
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    18.0, 0.0, 0.0, 0.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.asset(
+                                    'assets/images/bjqdicon.png',
+                                    width: 84.0,
+                                    height: 77.0,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      110.0, 15.0, 0.0, 0.0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'jxynhym2' /* 绑定渠道 */,
                                     ),
-                              ),
-                            ),
-                          ),
-                          Align(
-                            alignment: const AlignmentDirectional(1.0, 0.0),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 15.0, 22.0, 0.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(0.0),
-                                child: Image.asset(
-                                  'assets/images/uik9e_.png',
-                                  width: 18.0,
-                                  height: 18.0,
-                                  fit: BoxFit.contain,
+                                    style: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'SF Pro Display',
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
+                                  ),
                                 ),
                               ),
-                            ),
+                              Align(
+                                alignment: const AlignmentDirectional(1.0, 0.0),
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 15.0, 22.0, 0.0),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(0.0),
+                                    child: Image.asset(
+                                      'assets/images/uik9e_.png',
+                                      width: 18.0,
+                                      height: 18.0,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
                     ),
                   ),
@@ -1194,9 +1445,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           final responseListItem = _model
                               .listViewPagingController!
                               .itemList![responseListIndex];
-                          return OrderItemWidget(
-                            key: Key(
-                                'Keyjpc_${responseListIndex}_of_${_model.listViewPagingController!.itemList!.length}'),
+                          return InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed('OrderDetail');
+                            },
+                            child: OrderItemWidget(
+                              key: Key(
+                                  'Keyjpc_${responseListIndex}_of_${_model.listViewPagingController!.itemList!.length}'),
+                            ),
                           );
                         },
                       ),

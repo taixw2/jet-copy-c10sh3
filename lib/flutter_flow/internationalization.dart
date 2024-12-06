@@ -764,118 +764,263 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // OrderDetail
   {
-    '0q46exoh': {
-      'en': 'Package infomation',
-      'ru': 'Информация о пакете',
-      'zh_Hans': '包裹信息',
+    '7jgikcof': {
+      'en': '客户信息',
+      'ru': '',
+      'zh_Hans': '',
     },
-    '3vtoo1jq': {
-      'en': 'Package code',
-      'ru': 'Код упаковки',
-      'zh_Hans': '包裹代码',
+    'wmohx5yd': {
+      'en': '客户编码',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'kfctcfgk': {
-      'en': 'Client phone number',
-      'ru': 'Номер телефона клиента',
-      'zh_Hans': '客户电话号码',
+    '5m7amp4i': {
+      'en': 'JL-4443-Joe Wilson',
+      'ru': '',
+      'zh_Hans': '',
     },
-    '6cu6vavg': {
-      'en': 'Address',
-      'ru': 'Адрес',
-      'zh_Hans': '地址',
+    'fphtngk8': {
+      'en': 'JL-4443-Joe Wilson',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'rjxqzw9x': {
-      'en': 'Product Category',
-      'ru': 'Категория продукта',
-      'zh_Hans': '产品类别',
+    'u8fyaftw': {
+      'en': 'JL-4443-Joe Wilson2',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'u3aytnwr': {
-      'en': 'Package list',
-      'ru': 'Список пакетов',
-      'zh_Hans': '包裹列表',
+    'fn8a3d7y': {
+      'en': 'JL-4443-Joe Wilson3',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'nxe2g2i5': {
+      'en': '请选择',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '986nfeuj': {
+      'en': 'Search...',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uhuc8aer': {
+      'en': '客户地址',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'me1sugek': {
+      'en': '广州市白云区石门街石沙路石井工业区三横路1号G1 -102 .代码JL8888 ',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'mb5lggq3': {
+      'en': '备注',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'jc0hn4c9': {
+      'en': 'JL-4443-Joe Wilson',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '4ipxrbwg': {
+      'en': '运单信息',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'h4q9stnk': {
+      'en': '运单信息',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'epw8x6m3': {
+      'en': '**************',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'vj304mxx': {
+      'en': '商品类别',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wa8ah203': {
+      'en': 'Option 1',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'oaofo5iq': {
+      'en': 'Option 2',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'haqvsuso': {
+      'en': 'Option 3',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'droh6cnf': {
+      'en': '************',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '8e30vfza': {
+      'en': 'Search...',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9ckoxtdk': {
+      'en': '商品类别',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'gw2n11eg': {
+      'en': '*************',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'eec2ts4b': {
+      'en': '货物名称',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ga900l1u': {
+      'en': '**************',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'obap6664': {
+      'en': '目的地',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '0seon1by': {
+      'en': 'Option 1',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ypkq9lzq': {
+      'en': 'Option 2',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'v394aoyz': {
+      'en': 'Option 3',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '73gtajjk': {
+      'en': '************',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wir770u4': {
+      'en': 'Search...',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '6halj93h': {
+      'en': '货物信息',
+      'ru': '',
+      'zh_Hans': '',
     },
     'ms9931jy': {
-      'en': 'Volume(m3)',
+      'en': '体积(m3)',
       'ru': 'Объем(м3)',
       'zh_Hans': '体积(m3)',
     },
     'deqfins3': {
-      'en': 'Dimension(cm)',
+      'en': '密度(kg/m3)',
       'ru': 'Размеры (см)',
       'zh_Hans': '尺寸(厘米)',
     },
     'i453n80w': {
-      'en': 'Weight(kg)',
+      'en': '重量(kg)',
       'ru': 'Вес(кг)',
       'zh_Hans': '重量(公斤)',
     },
-    'n64a28pc': {
-      'en': 'Amount of places',
-      'ru': 'Количество мест',
-      'zh_Hans': '名额数量',
-    },
-    'b82qyd4o': {
-      'en': 'Packaging Type',
+    '9tls21xr': {
+      'en': '打包方式',
       'ru': 'Тип упаковки',
       'zh_Hans': '包裹类型',
     },
-    'mjjv5lmr': {
+    'l9c90az9': {
+      'en': '**********',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'prma6t8y': {
       'en': 'Option 1',
       'ru': 'Вариант 1',
       'zh_Hans': '选项 1',
     },
-    '78imepji': {
+    '52wdr516': {
       'en': 'Option 2',
       'ru': 'Вариант 2',
       'zh_Hans': '选项 2',
     },
-    'rvacox7r': {
+    'wwh4t4nb': {
       'en': 'Option 3',
       'ru': 'Вариант 3',
       'zh_Hans': '选项 3',
     },
-    '5q36rpcq': {
+    'um1ub24x': {
+      'en': '**********',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'k28cy0sm': {
+      'en': '**********',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '5tm89rec': {
       'en': 'Search...',
       'ru': 'Поиск...',
       'zh_Hans': '搜索...',
     },
     '5fbiw5k1': {
-      'en': 'Subtotal',
+      'en': '费用信息',
       'ru': 'Промежуточный итог',
       'zh_Hans': '小计',
     },
     'u8zc7d14': {
-      'en': 'Amount by kg',
+      'en': '费用单价（\$）',
       'ru': 'Количество в кг',
       'zh_Hans': '重量（公斤）',
     },
     'bx689zk7': {
-      'en': 'Amount by weight',
+      'en': '打包费（\$）',
       'ru': 'Количество по весу',
       'zh_Hans': '重量含量',
     },
     '2j81yl7n': {
-      'en': 'Insurance',
+      'en': '货物价值（\$）',
       'ru': 'Страхование',
       'zh_Hans': '保险',
     },
     'm0cud40z': {
-      'en': 'Package costs',
+      'en': '保险费（\$）',
       'ru': 'Стоимость пакета',
       'zh_Hans': '包裹费用',
     },
     'pbzy2jxq': {
-      'en': 'Load/unload costs',
+      'en': '落地费（\$）',
       'ru': 'Расходы на погрузку/разгрузку',
       'zh_Hans': '装卸费用',
     },
-    'xb0o5klb': {
-      'en': 'Total Sum',
-      'ru': 'Общая сумма',
-      'zh_Hans': '总和',
+    'zjho0hdi': {
+      'en': '合计',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '84tcwkz0': {
+      'en': '1.23\$',
+      'ru': '',
+      'zh_Hans': '',
     },
     '34b68ugu': {
-      'en': 'Comments',
+      'en': 'Comments 副驾说明',
       'ru': 'Комментарии',
       'zh_Hans': '评论',
     },
@@ -885,7 +1030,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': '文本框',
     },
     '7ymja05v': {
-      'en': 'Parcel already arrived at cargo.',
+      'en': '帮东西',
       'ru': 'Посылка уже прибыла в грузовой пункт.',
       'zh_Hans': '包裹已抵达货站。',
     },
@@ -894,15 +1039,30 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Галерея',
       'zh_Hans': '画廊',
     },
-    '6d2avfdq': {
-      'en': 'OrderDetail',
-      'ru': 'Подробности заказа',
-      'zh_Hans': '订单详情',
+    'qkmgxij7': {
+      'en': '2024.09.09',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'c9szrmes': {
-      'en': 'Edit',
-      'ru': 'Редактировать',
-      'zh_Hans': '编辑',
+    '0g0z6enj': {
+      'en': '+2',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'i4hmejbi': {
+      'en': '确认发货',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'k0i64xdn': {
+      'en': '返回',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wdqhk7t4': {
+      'en': '订单详情',
+      'ru': '',
+      'zh_Hans': '',
     },
     'vrbsx52y': {
       'en': 'Home',
@@ -1159,49 +1319,124 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // AllUserPage
   {
     '8sr1lasr': {
-      'en': 'All user',
+      'en': '角色',
       'ru': 'Все пользователи',
       'zh_Hans': '所有用户',
+    },
+    'caxwai84': {
+      'en': '新增',
+      'ru': '',
+      'zh_Hans': '',
     },
     'j1jehsmh': {
       'en': 'All',
       'ru': 'Админ',
       'zh_Hans': '管理员',
     },
-    '5iwvr61e': {
-      'en': 'Admin',
-      'ru': 'Админ',
-      'zh_Hans': '管理员',
+    'emesgkhy': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
     },
-    '7zlq84el': {
-      'en': 'Client',
-      'ru': 'Клиент',
-      'zh_Hans': '客户',
+    'x67mt5cd': {
+      'en': 'SUNNY',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'qfdpjdwh': {
-      'en': 'Manager',
-      'ru': 'Менеджер',
-      'zh_Hans': '经理',
+    'fvfqy3is': {
+      'en': '管理员',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'gnhvx8iq': {
-      'en': 'Agent',
-      'ru': 'Агент',
-      'zh_Hans': '代理人/代理商',
+    'er18n1l0': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'n5x6agf4': {
-      'en': 'Dispatcher',
-      'ru': 'Диспетчер',
-      'zh_Hans': '调度员',
+    'ixs0jabw': {
+      'en': 'SUNNY',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'yc2bdnio': {
-      'en': 'JL-444 Joe Wilson',
-      'ru': 'JL-444 Джо Уилсон',
-      'zh_Hans': 'JL-444 乔·威尔逊',
+    'c6tzy0x9': {
+      'en': '管理员',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'd8e2hhjc': {
-      'en': 'Client｜Email:joewilson@gmail.com',
-      'ru': 'Клиент｜Электронная почта:joewilson@gmail.com',
-      'zh_Hans': '客户｜邮箱:joewilson@gmail.com',
+    'htrsab5k': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '4vubxol7': {
+      'en': 'SUNNY',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'fq47594h': {
+      'en': '管理员',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'gcshlqyr': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '4bsuwnzm': {
+      'en': 'SUNNY',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'pvtipnk1': {
+      'en': '管理员',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'jrxn01tz': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ovlfb6cg': {
+      'en': 'SUNNY',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9myru30h': {
+      'en': '管理员',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ne7ahs89': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'yoc1s5ko': {
+      'en': 'SUNNY',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'fo5qaqet': {
+      'en': '管理员',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'yvcgq3xm': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '2nc1np9x': {
+      'en': 'SUNNY',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'lejzon6q': {
+      'en': '管理员',
+      'ru': '',
+      'zh_Hans': '',
     },
     'v78iqowa': {
       'en': 'Home',
@@ -2344,27 +2579,105 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // NewsSettingsPage
   {
-    'o05pemfw': {
-      'en': 'News history',
-      'ru': 'История новостей',
-      'zh_Hans': '历史新闻',
+    'vhd38wj1': {
+      'en': 'Delete',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'q114rdk9': {
-      'en':
-          'Dear customer,\nWe are pleased to inform you that your cargo with the tracking number [Tracking Number]...',
-      'ru':
-          'Уважаемый клиент,\nМы рады сообщить вам, что ваш груз с номером отслеживания [Tracking Number]...',
-      'zh_Hans': '尊敬的客户，\n我们很高兴地通知您，您的货物跟踪号为 [跟踪号]...',
+    'xfi7d3xh': {
+      'en': '衣服品类-修改报价金额',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'gsiggymn': {
-      'en': '2020.12.04 15:30',
-      'ru': '2020.12.04 15:30',
-      'zh_Hans': '2020.12.04 15:30',
+    'lzdj5diw': {
+      'en': '内容内容内容内容内容内容内容内容内容内容内容\n2024年 12 月 6 日 22:02',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '5arbwzet': {
+      'en': 'Delete',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'gcipungd': {
+      'en': '衣服品类-修改报价金额',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    's6pxcbpt': {
+      'en': '内容内容内容内容内容内容内容内容内容内容内容\n2024年 12 月 6 日 22:02',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'u7rp6y9x': {
+      'en': 'Delete',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'nw59ihgw': {
+      'en': '衣服品类-修改报价金额',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'k2h9oyj6': {
+      'en': '内容内容内容内容内容内容内容内容内容内容内容\n2024年 12 月 6 日 22:02',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uomekgx4': {
+      'en': 'Delete',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'qb3h7kyo': {
+      'en': '衣服品类-修改报价金额',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'dehrg25a': {
+      'en': '内容内容内容内容内容内容内容内容内容内容内容\n2024年 12 月 6 日 22:02',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'bwyxilgn': {
+      'en': 'Delete',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '0r4arzvm': {
+      'en': '衣服品类-修改报价金额',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'm2b7e6pu': {
+      'en': '内容内容内容内容内容内容内容内容内容内容内容\n2024年 12 月 6 日 22:02',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'tr4gq7fz': {
+      'en': 'Delete',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'gm8aamyb': {
+      'en': '衣服品类-修改报价金额',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'w0pxktdd': {
+      'en': '内容内容内容内容内容内容内容内容内容内容内容\n2024年 12 月 6 日 22:02',
+      'ru': '',
+      'zh_Hans': '',
     },
     'ul47lnak': {
-      'en': 'News settings',
+      'en': '新闻',
       'ru': 'Настройки новостей',
       'zh_Hans': '新闻设置',
+    },
+    'fzij7s2j': {
+      'en': '新增',
+      'ru': '',
+      'zh_Hans': '',
     },
     'p91j541o': {
       'en': 'Home',
@@ -2396,11 +2709,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Jone Doe',
       'ru': 'Джон Доу',
       'zh_Hans': '琼斯·多伊',
-    },
-    '9wq916wu': {
-      'en': '管理员',
-      'ru': 'Админ',
-      'zh_Hans': '管理员',
     },
     '427km5pk': {
       'en': '中文',
@@ -2537,6 +2845,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': '',
       'zh_Hans': '',
     },
+    'vtl458b1': {
+      'en': '总发货量',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ten9tcpz': {
+      'en': '1.789.98m3/288.937.00kg',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'oebith20': {
+      'en': '总到货量',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'v6n8st23': {
+      'en': '1.544.45m3/288.937.0',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'sjkwy6r0': {
+      'en': '未结算金额',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'otuxgvf1': {
+      'en': '900.000\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
     'jxynhym2': {
       'en': '绑定渠道',
       'ru': '',
@@ -2561,70 +2899,170 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // OrderPage
   {
     'sn8jo94b': {
-      'en': 'Orders',
+      'en': '订单',
       'ru': 'Заказы',
       'zh_Hans': '订单',
     },
-    'mpazdgtt': {
-      'en': 'All',
-      'ru': 'Все',
-      'zh_Hans': '全部',
+    'goi54j8z': {
+      'en': '导出',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'f3redik9': {
-      'en': 'On packaging',
-      'ru': 'На упаковке',
-      'zh_Hans': '打包中',
+    '956z54i2': {
+      'en': '搜索运单号/客户编码',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'a2ejbh97': {
-      'en': 'On warehouse',
-      'ru': 'На складе',
-      'zh_Hans': '仓库中',
+    '089osamv': {
+      'en': '开始时间',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'tvnsznia': {
-      'en': 'All',
-      'ru': 'Все',
-      'zh_Hans': '全部',
+    'hdyxj099': {
+      'en': '结束时间',
+      'ru': '',
+      'zh_Hans': '',
     },
-    '7y0dwk4a': {
-      'en': 'Shipped',
-      'ru': 'На упаковке',
-      'zh_Hans': '已发货',
+    '4fdz8ued': {
+      'en': 'Option 1',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'uwb7be4y': {
-      'en': 'Customs cleared',
-      'ru': 'На складе',
-      'zh_Hans': '清关完成',
+    '4znyfme4': {
+      'en': 'Option 2',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'd013y7fy': {
-      'en': 'Have arrived',
-      'ru': 'На складе',
-      'zh_Hans': '已到达',
+    'w5lc162h': {
+      'en': 'Option 3',
+      'ru': '',
+      'zh_Hans': '',
     },
-    'g6b0jx9d': {
-      'en': 'Home',
+    'wibw1d12': {
+      'en': '搜索/选择客户编码',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '024w16tc': {
+      'en': '搜索/选择客户编码',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '6tgiv2j1': {
+      'en': '所有(2889)',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uipfb3gi': {
+      'en': '入仓(2889)',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'crnqk0ab': {
+      'en': '确认打包',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '61m6dm0n': {
+      'en': '打包中',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'hgnnqc26': {
+      'en': '打包完毕',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ug02m4xw': {
+      'en': '确认发货',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9htituyj': {
+      'en': '已出仓',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'y1zlbzf5': {
+      'en': '预计到达',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    't5jy09er': {
+      'en': '已到达（未结算）',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'n3kybm6q': {
+      'en': '已到达（已结算）',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'jsbs0lgc': {
+      'en': '订单类型',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'vxy7gi6p': {
+      'en': '搜索/选择客户编码',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'jdrc6cgn': {
+      'en': '订单',
       'ru': 'Главная',
       'zh_Hans': '首页',
     },
   },
   // ProfilePage
   {
-    'yi3yppl9': {
-      'en': 'Create user',
+    'bsodpmp7': {
+      'en': 'Jone Doe',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '4wfspp9d': {
+      'en': '余额(\$)',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'z0qzz54x': {
+      'en': '3.829.208.493.00',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '49esupzp': {
+      'en': 'Jone Doe',
+      'ru': 'Джон Доу',
+      'zh_Hans': '琼斯·多伊',
+    },
+    '9wsqfy9t': {
+      'en': '管理员',
+      'ru': 'Админ',
+      'zh_Hans': '管理员',
+    },
+    'm0vaiqvz': {
+      'en': '余额(\$)',
       'ru': 'Создать пользователя',
       'zh_Hans': '创建用户',
     },
-    'zogt68mm': {
-      'en': 'All user',
-      'ru': 'Все пользователи',
-      'zh_Hans': '所有用户',
+    'c5ca19ec': {
+      'en': '3.123.222.221.000',
+      'ru': 'Создать пользователя',
+      'zh_Hans': '创建用户',
     },
-    'z6402k7q': {
-      'en': 'General',
-      'ru': 'Общий',
-      'zh_Hans': '一般的',
+    'eggzwxwb': {
+      'en': '报价单',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'sh90jdf5': {
+      'en': '管理员价格表',
+      'ru': '',
+      'zh_Hans': '',
     },
     'oxdb9uaa': {
-      'en': 'Wallet',
+      'en': '角色',
       'ru': 'Кошелек',
       'zh_Hans': '钱包',
     },
@@ -2634,7 +3072,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': '',
     },
     'nto9xlvk': {
-      'en': 'Gallery',
+      'en': '绑定渠道',
       'ru': 'Галерея',
       'zh_Hans': '图库',
     },
@@ -2644,7 +3082,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': '',
     },
     'tlhoagq3': {
-      'en': 'Settings',
+      'en': '新闻',
       'ru': 'Настройки',
       'zh_Hans': '设置',
     },
@@ -2653,8 +3091,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': '',
       'zh_Hans': '',
     },
+    'mean58wo': {
+      'en': '汇率',
+      'ru': 'Языки',
+      'zh_Hans': '语言',
+    },
+    'muqc4erg': {
+      'en': '',
+      'ru': '',
+      'zh_Hans': '',
+    },
     '2g41q2ti': {
-      'en': 'Languages',
+      'en': '仓库地址',
       'ru': 'Языки',
       'zh_Hans': '语言',
     },
@@ -2663,68 +3111,1286 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': '',
       'zh_Hans': '',
     },
-    'srd4tpvc': {
-      'en': 'Order management',
-      'ru': 'Управление заказами',
-      'zh_Hans': '订单管理',
+    'hri3po1l': {
+      'en': '目的地设置',
+      'ru': 'Языки',
+      'zh_Hans': '语言',
     },
-    '4q1uehnf': {
-      'en': 'All orders',
-      'ru': 'Все заказы',
-      'zh_Hans': '所有订单',
-    },
-    '9150qw2i': {
+    'bskzsxs4': {
       'en': '',
       'ru': '',
       'zh_Hans': '',
     },
-    'qbn0sr4g': {
-      'en': 'Coustom',
-      'ru': 'Coustom',
-      'zh_Hans': '清关',
+    'iq3qhwn2': {
+      'en': '财务',
+      'ru': 'Языки',
+      'zh_Hans': '语言',
     },
-    's78pi6mu': {
-      'en': '',
-      'ru': '',
-      'zh_Hans': '',
-    },
-    '1fbd7rqd': {
-      'en': 'Notification & Support',
-      'ru': 'Уведомление и поддержка',
-      'zh_Hans': '通知与支持',
-    },
-    'nrutdryx': {
-      'en': 'Notification',
-      'ru': 'Уведомление',
-      'zh_Hans': '通知',
-    },
-    'bcwb7duc': {
-      'en': '',
-      'ru': '',
-      'zh_Hans': '',
-    },
-    'w5z4jcqx': {
-      'en': 'Support',
-      'ru': 'Поддерживать',
-      'zh_Hans': '支持',
-    },
-    'jz9ke9ql': {
+    'tvlbmrok': {
       'en': '',
       'ru': '',
       'zh_Hans': '',
     },
     '325f3ykj': {
-      'en': 'Logout',
+      'en': '退出登录',
       'ru': 'Выйти',
       'zh_Hans': '登出',
     },
     'nnf59snl': {
-      'en': 'Delete account',
+      'en': '删除账号',
       'ru': 'Удалить аккаунт',
       'zh_Hans': '删除帐户',
     },
     'zewbeout': {
       'en': '个人中心',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // Channelbinding
+  {
+    'dx0485x8': {
+      'en': '绑定信息',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'b3y02efb': {
+      'en': '选择渠道',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'x4xqt0ax': {
+      'en': '渠道 A',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '3zjciyy3': {
+      'en': '渠道 B',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'fdn6czff': {
+      'en': '渠道 C',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ru675ahy': {
+      'en': '选择渠道',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'xibki72e': {
+      'en': 'Search...',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '606i79pn': {
+      'en': '选择客户编码',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'f34dg7aq': {
+      'en': '渠道 A',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '2mebaxld': {
+      'en': '渠道 B',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9nl771y5': {
+      'en': '渠道 C',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'myx8bq9g': {
+      'en': '选择渠道',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '3rt1u7p2': {
+      'en': '搜索/选择客户编码',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    't4ea3vb9': {
+      'en': '绑定信息',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'fxzgdhf3': {
+      'en': 'JL-4443-8757-1098',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '1jmv4bs9': {
+      'en': '确定出仓',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'y1ulr86s': {
+      'en': '服装品类',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '15khkw9g': {
+      'en': '渠道费用',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    't602rpbo': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '76lykfwj': {
+      'en': '重量',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'i954rjxp': {
+      'en': 'kg',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'mdlnjqzm': {
+      'en': '体积',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ajtskwhy': {
+      'en': 'm3',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'rtye86p7': {
+      'en': '密度',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '2yzbu9z6': {
+      'en': 'kg/m3',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'e2oziyz2': {
+      'en': '件数',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'idtl3akw': {
+      'en': '件',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'k53c3su4': {
+      'en': 'JL-4443-8757-1098',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'osb9kq7u': {
+      'en': '确定出仓',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'i2im1br6': {
+      'en': '服装品类',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '25qoaekk': {
+      'en': '渠道费用',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '4so8hxfr': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'tyyueqbb': {
+      'en': '重量',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '01y4zeli': {
+      'en': 'kg',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9xf2423k': {
+      'en': '体积',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ys5pagov': {
+      'en': 'm3',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wumr2gk6': {
+      'en': '密度',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ij5jr16j': {
+      'en': 'kg/m3',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '3teptmjt': {
+      'en': '件数',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'gbvf7al6': {
+      'en': '件',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'mccn8dzq': {
+      'en': '确认出仓',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'n69mwzks': {
+      'en': '取消',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '58ugypmt': {
+      'en': '渠道绑定',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'g6b0jx9d': {
+      'en': 'Home',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // ClientPage
+  {
+    'ykrw4low': {
+      'en': '客户',
+      'ru': 'Заказы',
+      'zh_Hans': '订单',
+    },
+    'yogc4zfh': {
+      'en': '搜索客户编码',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'tg4g4ef8': {
+      'en': 'Jone Doe  JL-4443 ',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'u6sa71cz': {
+      'en': '未结算余额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'pa6n1ez1': {
+      'en': '-2893\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'eitcq4bv': {
+      'en': '账 户   余 额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'jh3qa65d': {
+      'en': '2893567\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wr7bx2lk': {
+      'en': 'Jone Doe  JL-4443 ',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '1xmedthi': {
+      'en': '未结算余额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'd18037d4': {
+      'en': '-2893\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'm4s4wxg2': {
+      'en': '账 户   余 额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'yhzf5zr2': {
+      'en': '2893567\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ovqqjfyv': {
+      'en': 'Jone Doe  JL-4443 ',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'k6plqx1a': {
+      'en': '未结算余额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'u0h5mhrf': {
+      'en': '-2893\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'd63ys9yi': {
+      'en': '账 户   余 额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'bqdwwcuv': {
+      'en': '2893567\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '3sb27tj9': {
+      'en': 'Jone Doe  JL-4443 ',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '8kgiq9st': {
+      'en': '未结算余额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '05jkm25k': {
+      'en': '-2893\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'yu1iu3sj': {
+      'en': '账 户   余 额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'bitzw5xx': {
+      'en': '2893567\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'zfex8dv3': {
+      'en': 'Jone Doe  JL-4443 ',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'hdhund2z': {
+      'en': '未结算余额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '50qumqm9': {
+      'en': '-2893\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9vcttjy9': {
+      'en': '账 户   余 额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '8gh6suir': {
+      'en': '2893567\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '5q3t6gmh': {
+      'en': 'Jone Doe  JL-4443 ',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'n629x9er': {
+      'en': '未结算余额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    't35v8wdn': {
+      'en': '-2893\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uujng40m': {
+      'en': '账 户   余 额:',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'cm9m7fdw': {
+      'en': '2893567\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '6wurewfp': {
+      'en': '客户',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // SupportPage
+  {
+    'w9baqgec': {
+      'en': '支持',
+      'ru': 'Заказы',
+      'zh_Hans': '订单',
+    },
+    '92w742c1': {
+      'en': '开始时间',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'rwbc454x': {
+      'en': '结束时间',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'pk71aps5': {
+      'en': '主标题文案',
+      'ru':
+          'Уважаемый клиент,\nМы рады сообщить Вам, что Ваш груз с номером отслеживания [Отслеживание...',
+      'zh_Hans': '尊敬的顾客，\n我们很高兴地通知您，您的货物跟踪号为 [跟踪...',
+    },
+    'xnl7rgg1': {
+      'en': '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
+      'ru':
+          'Уважаемый клиент,\nМы рады сообщить Вам, что Ваш груз с номером отслеживания [Отслеживание...',
+      'zh_Hans': '尊敬的顾客，\n我们很高兴地通知您，您的货物跟踪号为 [跟踪...',
+    },
+    'za6dv8lo': {
+      'en': '2024.12.04 15:30',
+      'ru': '2024.12.04 15:30',
+      'zh_Hans': '2024.12.04 15:30',
+    },
+    'pwjd77z2': {
+      'en': '支持',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // SupportDetailPage
+  {
+    '9a5wr9mb': {
+      'en': '主标题内容详情',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '87kxai7l': {
+      'en': '12 月 5 日 20:57',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'cgj99vcr': {
+      'en':
+          '内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'h80ijzch': {
+      'en': '详情',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'zov3cdvi': {
+      'en': 'Home',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // NewRoleUser
+  {
+    '93cfqjnk': {
+      'en': '角色类型',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'no1uwcwa': {
+      'en': '请选择',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '1lai0kwr': {
+      'en': 'Search...',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'skf5uzux': {
+      'en': '姓名',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '2evmhdgs': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wd0g6atw': {
+      'en': '编码',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '0bih3r6q': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'cbv2npkz': {
+      'en': '手机号',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'y3axrahc': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'xoo3b3dt': {
+      'en': '账号',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uvbmtqqp': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '184ayqvz': {
+      'en': '密码',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '3rjrdho4': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'adw76tkr': {
+      'en': '绑定关系',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'jdewjac4': {
+      'en': '',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '3m4o5027': {
+      'en': '管理员加价(\$)',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'gakn8fnx': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'qt4ondtd': {
+      'en': '客户经理',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ovssi7dc': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'lw05jpml': {
+      'en': '客户经理加价',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'xhauguvc': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ls9u15qb': {
+      'en': '代理',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'gyefro2e': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ticesk9s': {
+      'en': '代理加价',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ftjyws60': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '61884b6u': {
+      'en': '保存',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    's879zbh1': {
+      'en': '返回',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'zqfa0zvw': {
+      'en': '新增角色',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ga445lh7': {
+      'en': 'Home',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // PriceSheetPage
+  {
+    'vozvwfep': {
+      'en': '报价单',
+      'ru': 'Все пользователи',
+      'zh_Hans': '所有用户',
+    },
+    'nxf5irgc': {
+      'en': '新增',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'givro0hh': {
+      'en': 'All',
+      'ru': 'Админ',
+      'zh_Hans': '管理员',
+    },
+    'pvdcmvsi': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'psfaf38g': {
+      'en': '服装',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'y1xnwa6f': {
+      'en': '14-17 天',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '74itpfvc': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wwszik47': {
+      'en': '服装',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'mc98vo8f': {
+      'en': '14-17 天',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '474mgijt': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wjdc74xo': {
+      'en': '服装',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'umafgiw8': {
+      'en': '14-17 天',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ecrqgeh2': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '1rgrkebf': {
+      'en': '服装',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'bym6059k': {
+      'en': '14-17 天',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9y7wdp7f': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'i5yyiqiy': {
+      'en': '服装',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'bk5w8td0': {
+      'en': '14-17 天',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'gj4eqisc': {
+      'en': '删除',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '8n2d6u3r': {
+      'en': '服装',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'axk34new': {
+      'en': '14-17 天',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'cvfs3pk1': {
+      'en': 'Home',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // AdminPriceDetail
+  {
+    'mai491en': {
+      'en': '密度区间',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '2gpp46fd': {
+      'en': '单价',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '28gzueqp': {
+      'en': '0-0.33',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'l2bpltv2': {
+      'en': '1.000',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'p6m82kmh': {
+      'en': '0-0.33',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '2u5hbv64': {
+      'en': '1.000',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'vwixmyjp': {
+      'en': '0-0.33',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'm9w5ermm': {
+      'en': '1.000',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'rdv9bw77': {
+      'en': '保存',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'fqiss1di': {
+      'en': '返回',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'mej7tdxn': {
+      'en': '管理员价格表',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'n5tn6y3a': {
+      'en': '新增',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '4z4tlrbj': {
+      'en': 'Home',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // PriceSheetDetail
+  {
+    'pv5t5fxw': {
+      'en': '品类名称',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'k7e8z72r': {
+      'en': '品类名称',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '7uiio5ul': {
+      'en': '天数',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'i6blnnvb': {
+      'en': '11-13',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'we0lp1aw': {
+      'en': '天',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '4fjf3mp5': {
+      'en': '运输方式',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'onq7c6a4': {
+      'en': '航运',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'dcksc771': {
+      'en': '密度区间',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'u6jhhdu6': {
+      'en': '单价',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9yrj7gms': {
+      'en': '0-0.33',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '633wazfe': {
+      'en': '1.000',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '28swaf3m': {
+      'en': '0-0.33',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'p5fls2a2': {
+      'en': '1.000',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'k8lnxnoq': {
+      'en': '0-0.33',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'hies0s34': {
+      'en': '1.000',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wbud3xuu': {
+      'en': '备注',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'zg60vo80': {
+      'en': '-',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'px9h5g4y': {
+      'en': '修改时间',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'i24s84h6': {
+      'en': '2024年 12 月 6 日 21:38',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'npwkhzhp': {
+      'en': '修改价格',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'z9r0jh4s': {
+      'en': '2024年 12 月 6 日 21:38',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '7mtmfic2': {
+      'en': '修改价格',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'hd47mlhm': {
+      'en': '报价单详情',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9mzjoa9e': {
+      'en': 'Home',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // EditPriceSheetPage
+  {
+    'v5scpc8x': {
+      'en': '品类名称',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'bmkoyfdh': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uc18qsrb': {
+      'en': '天数',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'fj5eqyzs': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'narqoalx': {
+      'en': '天',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '4d6tdctw': {
+      'en': '运输方式',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9cwauti2': {
+      'en': '航运',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'to7c5ynx': {
+      'en': '密度区间',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'v65907g7': {
+      'en': '单价',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'a6y9z80b': {
+      'en': '0-0.33',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'hfuu6m8z': {
+      'en': '1.000',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'gkbx9v81': {
+      'en': '0-0.33',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'fytwhmk6': {
+      'en': '1.000',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wtn7bqgb': {
+      'en': '0-0.33',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '38sqagln': {
+      'en': '1.000',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'erjshrzg': {
+      'en': '备注',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'fnmxc910': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'f0wwk4i6': {
+      'en': '修改时间',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'qe6d1y9a': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'i6gmxpe9': {
+      'en': '保存',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'wsycwz9a': {
+      'en': '返回',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'cmhnlbo9': {
+      'en': '编辑报价单',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'rjlgz18i': {
+      'en': 'Home',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // NewDetailPage
+  {
+    'np3hpipo': {
+      'en': '主标题内容详情',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'kck35qwt': {
+      'en': '12 月 5 日 20:57',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '6s9kmjgq': {
+      'en':
+          '内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'y607skmj': {
+      'en': '详情',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    's4x6z39y': {
+      'en': 'Home',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // ExchangeRatePage
+  {
+    'ocxxr4t9': {
+      'en': '1\$',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'a6dvkut8': {
+      'en': '100RUB',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'xmwihhqb': {
+      'en': '1USTD',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'zsgz1gv5': {
+      'en': '7.5¥',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'lomsc4yh': {
+      'en': '汇卡 1¥',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'x9gyj93f': {
+      'en': '14.4RUB',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '5dx37u3r': {
+      'en': '现金 1¥',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'own9vl9v': {
+      'en': '14.4RUB',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ih6cmrlu': {
+      'en': '保存',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'n285vgde': {
+      'en': '返回',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'zkqa6qb2': {
+      'en': '汇率',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'odrptise': {
+      'en': '新增',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'p2r5xhvn': {
+      'en': 'Home',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // WarehouseAddressPage
+  {
+    'eomcm64z': {
+      'en': 'Delete',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '0dtdtxe1': {
+      'en': '广州白云区广州白云区广州白云区广州白云区广州白云区广州白云区',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ehi7uow3': {
+      'en': '代码 JLB888888',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'eoh2wjgv': {
+      'en': 'Delete',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '2010umwd': {
+      'en': '广州白云区广州白云区广州白云区广州白云区广州白云区广州白云区',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'izfyih51': {
+      'en': '代码 JLB888888',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uis8meys': {
+      'en': 'Delete',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'w8qwvyho': {
+      'en': '广州白云区广州白云区广州白云区广州白云区广州白云区广州白云区',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '61eu9sze': {
+      'en': '代码 JLB888888',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'b22lu0wl': {
+      'en': '仓库地址',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ndpxlbne': {
+      'en': '新增',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '99oi38r7': {
+      'en': 'Home',
+      'ru': 'Главная',
+      'zh_Hans': '首页',
+    },
+  },
+  // DestinationPage
+  {
+    'k9o5q5ux': {
+      'en': '目的地',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'spirw6by': {
+      'en': '简称',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '83y5iah7': {
+      'en': '墨西哥',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'lf0e5xh2': {
+      'en': 'MXG',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '4qggczza': {
+      'en': '莫斯科',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '02088yz8': {
+      'en': 'MSK',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '6rtch1dt': {
+      'en': '保存',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uo7rhtth': {
+      'en': '返回',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'vgtjsptj': {
+      'en': '目的地设置',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'dwvqhi0y': {
+      'en': '新增',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '2p3r9nzn': {
+      'en': 'Home',
       'ru': 'Главная',
       'zh_Hans': '首页',
     },
@@ -2758,17 +4424,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Steps
   {
     'nsmi26dh': {
-      'en': 'Shipped',
+      'en': '入仓',
+      'ru': 'Отправлен',
+      'zh_Hans': '已发货',
+    },
+    'us1rqkia': {
+      'en': '确认打包',
       'ru': 'Отправлен',
       'zh_Hans': '已发货',
     },
     'sm8sti9m': {
-      'en': 'Customs cleared',
+      'en': '打包中',
+      'ru': 'Прошли таможню',
+      'zh_Hans': '清关完成',
+    },
+    'srvhzhqo': {
+      'en': '打包完毕',
       'ru': 'Прошли таможню',
       'zh_Hans': '清关完成',
     },
     'yplucg2m': {
-      'en': 'Have arrived',
+      'en': '确认发货',
       'ru': 'Доставленный',
       'zh_Hans': '已到达',
     },
@@ -3334,6 +5010,229 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'dau3i9kv': {
       'en': '14.4RUB',
+      'ru': '',
+      'zh_Hans': '',
+    },
+  },
+  // NewPriceRangTableDialog
+  {
+    'polil0us': {
+      'en': '新增价格表',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '77n4ylym': {
+      'en': '密度区间',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '15rr1bbd': {
+      'en': '单价',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9q94xapg': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'e3gwhvrb': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '76g3z0qo': {
+      'en': '取消',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'n7z1cacd': {
+      'en': '确定',
+      'ru': '',
+      'zh_Hans': '',
+    },
+  },
+  // NewNewsDialog
+  {
+    '69sb5qn3': {
+      'en': '新增新闻',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'jxevbxqb': {
+      'en': '主标题',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'kqj8m2pk': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '1c2j52zp': {
+      'en': '内容',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'hfnh74uh': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'hr5rke3r': {
+      'en': '拍照',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'f57lpd6p': {
+      'en': '取消',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'p2oj0zb5': {
+      'en': '确定',
+      'ru': '',
+      'zh_Hans': '',
+    },
+  },
+  // NewExchangeRateDialog
+  {
+    'd3phbajc': {
+      'en': '新增 汇率',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'kgmscebx': {
+      'en': '现金 1¥',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'l6e34kmm': {
+      'en': '',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'e7wwns20': {
+      'en': '现金 1¥',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9s8rnxnz': {
+      'en': '现金 1¥',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '1qawe2kw': {
+      'en': '',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'qbcsb1w1': {
+      'en': '14.4RUB',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '8mxlnmfz': {
+      'en': '取消',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'fhc9g96b': {
+      'en': '确定',
+      'ru': '',
+      'zh_Hans': '',
+    },
+  },
+  // NewAddressDialog
+  {
+    '6lqgxwsc': {
+      'en': '新增地址',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '2ioadipb': {
+      'en': '地址',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ppu5aw2f': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'u5ufrv34': {
+      'en': '代码',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '9usgnq6s': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'qpbp5n3d': {
+      'en': '取消',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '5f2fl73n': {
+      'en': '确定',
+      'ru': '',
+      'zh_Hans': '',
+    },
+  },
+  // FinanceActionSheet
+  {
+    'jwyrt7sc': {
+      'en': '财务',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uzioypdw': {
+      'en': '财务',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'jeihz4sk': {
+      'en': '财务记录',
+      'ru': '',
+      'zh_Hans': '',
+    },
+  },
+  // NewDestinationDialog
+  {
+    'hc7ovuul': {
+      'en': '新增目的地',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '0k2g21tf': {
+      'en': '目的地',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'b88ig5no': {
+      'en': '简称',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'pazet5o2': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'l1oxhuj6': {
+      'en': '请输入',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '124uhzvh': {
+      'en': '取消',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'x3lgtqd4': {
+      'en': '确定',
       'ru': '',
       'zh_Hans': '',
     },

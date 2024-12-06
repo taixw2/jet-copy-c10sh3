@@ -86,3 +86,24 @@ export '/home_page/home_page/home_page_widget.dart' show HomePageWidget;
 export '/order_page/order_page/order_page_widget.dart' show OrderPageWidget;
 export '/profile_page/profile_page/profile_page_widget.dart'
     show ProfilePageWidget;
+export '/channelbinding/channelbinding_widget.dart' show ChannelbindingWidget;
+export '/client_page/client_page_widget.dart' show ClientPageWidget;
+export '/support_page/support_page_widget.dart' show SupportPageWidget;
+export '/support_detail_page/support_detail_page_widget.dart'
+    show SupportDetailPageWidget;
+export '/new_role_user/new_role_user_widget.dart' show NewRoleUserWidget;
+export '/price_sheet_page/price_sheet_page_widget.dart'
+    show PriceSheetPageWidget;
+export '/admin_price_detail/admin_price_detail_widget.dart'
+    show AdminPriceDetailWidget;
+export '/price_sheet_detail/price_sheet_detail_widget.dart'
+    show PriceSheetDetailWidget;
+export '/edit_price_sheet_page/edit_price_sheet_page_widget.dart'
+    show EditPriceSheetPageWidget;
+export '/new_detail_page/new_detail_page_widget.dart' show NewDetailPageWidget;
+export '/exchange_rate_page/exchange_rate_page_widget.dart'
+    show ExchangeRatePageWidget;
+export '/warehouse_address_page/warehouse_address_page_widget.dart'
+    show WarehouseAddressPageWidget;
+export '/destination_page/destination_page_widget.dart'
+    show DestinationPageWidget;

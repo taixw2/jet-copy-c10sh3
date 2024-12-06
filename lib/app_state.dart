@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:csv/csv.dart';
 import 'package:synchronized/synchronized.dart';
+import 'flutter_flow/flutter_flow_util.dart';
+import 'dart:convert';
 
 class FFAppState extends ChangeNotifier {
   static FFAppState _instance = FFAppState._internal();
@@ -20,6 +22,17 @@ class FFAppState extends ChangeNotifier {
     secureStorage = const FlutterSecureStorage();
     await _safeInitAsync(() async {
       _ROLE = await secureStorage.getString('ff_ROLE') ?? _ROLE;
+    });
+    await _safeInitAsync(() async {
+      _ROLETYPE = (await secureStorage.getStringList('ff_ROLETYPE'))?.map((x) {
+            try {
+              return jsonDecode(x);
+            } catch (e) {
+              print("Can't decode persisted json. Error: $e.");
+              return {};
+            }
+          }).toList() ??
+          _ROLETYPE;
     });
   }
 
@@ -104,6 +117,60 @@ class FFAppState extends ChangeNotifier {
 
   void insertAtIndexInLANGUAGE(int index, String value) {
     LANGUAGE.insert(index, value);
+  }
+
+  List<dynamic> _ROLETYPE = [
+    jsonDecode('{\"label\":\"管理员\",\"value\":\"admin\"}'),
+    jsonDecode('{\"label\":\"仓管\",\"value\":\"warehouseAdmin\"}'),
+    jsonDecode('{\"label\":\"客户\",\"value\":\"client\"}'),
+    jsonDecode('{\"label\":\"客户经理\",\"value\":\"agent\"}'),
+    jsonDecode('{\"label\":\"财务\",\"value\":\"finance\"}'),
+    jsonDecode('{\"label\":\"操作员\",\"value\":\"operator\"}'),
+    jsonDecode('{\"label\":\"渠道\",\"value\":\"channel\"}'),
+    jsonDecode('{\"label\":\"莫办\",\"value\":\"moban\"}')
+  ];
+  List<dynamic> get ROLETYPE => _ROLETYPE;
+  set ROLETYPE(List<dynamic> value) {
+    _ROLETYPE = value;
+    secureStorage.setStringList(
+        'ff_ROLETYPE', value.map((x) => jsonEncode(x)).toList());
+  }
+
+  void deleteROLETYPE() {
+    secureStorage.delete(key: 'ff_ROLETYPE');
+  }
+
+  void addToROLETYPE(dynamic value) {
+    ROLETYPE.add(value);
+    secureStorage.setStringList(
+        'ff_ROLETYPE', _ROLETYPE.map((x) => jsonEncode(x)).toList());
+  }
+
+  void removeFromROLETYPE(dynamic value) {
+    ROLETYPE.remove(value);
+    secureStorage.setStringList(
+        'ff_ROLETYPE', _ROLETYPE.map((x) => jsonEncode(x)).toList());
+  }
+
+  void removeAtIndexFromROLETYPE(int index) {
+    ROLETYPE.removeAt(index);
+    secureStorage.setStringList(
+        'ff_ROLETYPE', _ROLETYPE.map((x) => jsonEncode(x)).toList());
+  }
+
+  void updateROLETYPEAtIndex(
+    int index,
+    dynamic Function(dynamic) updateFn,
+  ) {
+    ROLETYPE[index] = updateFn(_ROLETYPE[index]);
+    secureStorage.setStringList(
+        'ff_ROLETYPE', _ROLETYPE.map((x) => jsonEncode(x)).toList());
+  }
+
+  void insertAtIndexInROLETYPE(int index, dynamic value) {
+    ROLETYPE.insert(index, value);
+    secureStorage.setStringList(
+        'ff_ROLETYPE', _ROLETYPE.map((x) => jsonEncode(x)).toList());
   }
 }
 
